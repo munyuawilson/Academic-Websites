@@ -131,6 +131,66 @@ Team Management
 
 
   </div>  
+
+  <div class="container-fluid mt-3">
+    <h2>Why Choose MasterAssingmentHelp?</h2>
+    <p>Our following features will help you to decide why should you choose us. The following features makes us unique and prominent in the industry and students always prefer MasterAssignmentHelp over others. If you are visiting us first time, just discuss your project on the given Whatsapp, negotiate, and get your task done. Check our following unparalleled characteristics and  decide yourself. </p>
+
+  </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul>
+      
+
+
+
+
+        <li>Instant Reply and Help</li>
+        <li>Plagiarism Free Work</li>
+        <li>No AI written Assignments</li>
+        <li>Experts from All over the World</li>
+        <li>Affordable Prices</li>
+      </ul>
+      <ul>
+      
+      
+
+
+
+
+
+
+
+        <li>100% Money Back Guarantee</li>
+        <li>Meet the Given Timeline</li>
+        <li>Work until Satisfaction</li>
+        <li>Projects, Assignments, Course</li>
+        <li>Familiar with all types of Web Portals</li>
+      </ul>
+    </div>
+    <div class="col">
+      <img src="" alt="img">
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <h2>Assignment Help Online for Students</h2>
+  <div class="row">
+    <div class="col"><img src="" alt="img"></div>
+    <div class="col">
+
+
+    <p>In today advanced era, we are supposed to manage dozens of tasks daily. For students, it is a hard nut to crack to manage their routine work as they are likely to be engaged in different activities. Moreover, various students have to do part time job to meet their expenses as well.  Various responsibilities on students drain their energy. Therefore, students have little time to enjoy after spending hours of their time in colleges and universities. 
+
+However, MasterAssignmentHelp is always there to help students by mitigating their load. We get you covered in assignment writings, essay writing, online classes, online complete courses, online exams help, and projects. Our team of experts of all subjects will help you to get high grades in all the given tasks. So, don’t compromise on your freedom and share your burden with us. Be smart and just contact us on the given WhatsApp and discuss your tasks with us. </p>
+    </div>
+  </div>
+</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
