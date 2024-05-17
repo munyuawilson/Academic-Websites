@@ -90,8 +90,8 @@
 <h2>Who We Are?</h2>
 <div class="row">
     <div class="col">
-        <img src="" alt="">
-        <h2></h2>
+        <img src="" alt="ceo">
+        <h2>CEO</h2>
         <a href="">WhatsApp Now!</a>
     </div>
     <div class="col">
@@ -101,10 +101,36 @@
     <p>As an Assignment Helper, I have been working on different freelancing platforms for 8 years. In these 8 years, I tried to help students to get high grades in their studies. 
     </p>
 <p>After serving years in this field, I felt to create an online platform where I can showcase my expertise in a better way. In these 8 years, I managed to build up a team of experts and professionals (Phd and professors of all relevant subjects). You can check all of my work in the sample section. </p>
-    </div>
+   Assignment Writing
+<progress value="70" max="100"></progress>
+Essay Writing
+<progress value="80" max="100"></progress>
+Dissertation Writing
+<progress value="90" max="100">90</progress>
+Team Management
+<progress value="70" max="100">70</progress>
+
 </div>
 </div>
-    
+</div>
+
+
+
+  <div class="container-fluid">
+
+<div class="row">
+<div class="col">
+  <h2>We Offer a Wide Range of Writing Services
+</h2>
+
+<p>Our Assignement Helpers are always up to mitigate the educational stress of students all over the world. You can check our these services or contact us via given WhatsApp and get an instant solution. </p>
+</div>
+<div class="col"></div>
+
+</div>
+
+
+  </div>  
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
