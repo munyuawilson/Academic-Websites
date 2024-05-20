@@ -8,7 +8,15 @@
     <title>Home|| Masters Assignment Help</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
-</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/animate.min.css') }}">
+
+
+  </head>
+
+
 <body>
 
 <nav class="navbar navbar-expand-md navbar-light nav-background nav-bg">
@@ -55,7 +63,7 @@
 
 
 
-<div class="container-fluid mt-5">
+<div class="container-fluid mt-5 animated-section animate__animated animate__fadeInUp animate__slow 5s animate__delay-.5s">
 
 
 <div class="row mt-5">
@@ -122,13 +130,13 @@
 <!--About Us!-->
 
 <div class="container mt-4">
-    <h2 class="text-center text-primary">Take my Online Class Help for Me</h2>
+    <h2 class="text-center animated-section text-primary animate__animated animate__slideUp animate__slow 2s animate__delay-.5s">Take my Online Class Help for Me</h2>
 
-<p class="text-center mt-5">MasterAssingmentHelp.com is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
+<p class="text-center mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">MasterAssingmentHelp.com is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
 
 
-<h2 class="text-center text-primary mt-5">Who We Are?</h2>
-<div class="row mt-5">
+<h2 class="text-center text-primary mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">Who We Are?</h2>
+<div class="row mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
     <div class="col text-center justify-content-center">
         <img src="{{ asset('/images/WhatsApp-Image-2023-11-10-at-1.06.22-PM.jpeg') }}" alt="ceo" height="150px" class="ceo-image ">
         <h4 class="text-primary mt-3 mb-3">CEO MasterAssingmentHelp</h4>
@@ -156,9 +164,9 @@ Team Management
 
 
 
-  <div class="container-fluid mt-5">
+  <div class="container-fluid mt-5 ">
 
-<div class="row bg-primary">
+<div class="row bg-primary animated-section animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
 <div class="col text-center justify-content-center">
   <h2 class="text-center text-white pt-5">We Offer a Wide Range of Writing Services
 </h2>
@@ -180,14 +188,14 @@ Team Management
 
   </div>
 
-<div class="container border mt-5">
+<div class="container border animated-section mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
   <div class="row">
     <div class="col">
       <div class="row">
       <div class="col">
       <ul class="list">
       
-
+ 
 
 
 
@@ -227,8 +235,8 @@ Team Management
 
 
 
-<div class="container mt-5">
-  <h2 class="text-center text-primary">Assignment Help Online for Students</h2>
+<div class="container mt-5 animated-section animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
+  <h2 class="text-center text-primary ">Assignment Help Online for Students</h2>
   <div class="row mt-5">
     <div class="col text-center"><img src="{{ asset('/images/ea0d0941-66b1-49ae-9686-07209f8ed3c6-792x1024-removebg-preview.png') }}" alt="img" height="300px" class="text-center"></div>
     <div class="col">
@@ -245,7 +253,7 @@ Team Management
 
 <h2 class="text-center text-primary mt-5 ">How does it work</h2>
 
-<div class="container-fluid mt-5 border">
+<div class="container-fluid mt-5 border animated-section animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
 
 
 
@@ -277,7 +285,88 @@ Team Management
 </div>
 
 
+<div class="container mt-5 animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s" id="testimonials">
+    <h2 class="
+text-center text-primary">What Students Say About Us</h2>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Robert Garrison
+                        </div>
+                        <div class="designation"></div>
+                    </div>
+                    <div class="face back-face">
+                        
+                        <div class="testimonial">
+                            "Amazing work. worked done as they promised in conversation. I got an A grade on that assignment. All the process was stress free. love to work again"
+
+
+                        </div>
+                        <span class="material-symbols-outlined px-5 py-2">
+                            format_quote
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Jeffery Kennan
+                        </div>
+                        <div class="designation"></div>
+                    </div>
+                    <div class="face back-face">
+                        
+                        <div class="testimonial">
+                            "Amazing work. worked done as they promised in conversation. I got an A grade on that assignment. All the process was stress free. love to work again"
+                        </div>
+                        <span class="material-symbols-outlined px-5 py-2">
+                            format_quote
+                            </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="face front-face">
+                        <img src="https://images.unsplash.com/photo-1614574762522-6ac2fbba2208?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjY2fHxtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="" class="profile">
+                        <div class="pt-3 text-uppercase name">
+                            Issac Maxwell
+                        </div>
+                        <div class="designation"></div>
+                    </div>
+                    <div class="face back-face">
+                        <i class="bi bi-quote text-success"></i>
+                        <div class="testimonial ">
+                            "Amazing work. worked done as they promised in conversation. I got an A grade on that assignment. All the process was stress free. love to work again"
+                        </div>
+                        <span class="material-symbols-outlined px-5 py-2">
+                            format_quote
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
 </body>
 <script src="{{ asset('/js/index.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 </html>
