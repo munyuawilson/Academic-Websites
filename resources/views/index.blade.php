@@ -23,10 +23,10 @@
     <div class=" container-fluid justify-content-center ">
         <ul class="navbar-nav pt-2">
             <li class="nav-item px-2
-            pt-2">+447554912584
+            pt-2">+19143174571 
 </li>
-            <li class="nav-item px-2 pt-2">+923436078969</li>
-            <li class="nav-item px-2 pt-2">info@masterassignmenthelp.com</li>
+            
+            <li class="nav-item px-2 pt-2">Mastersassignmenth@gmail.com </li>
             <li class="nav-item px-2 rounded bg-success pt-2 pb-2 "><a href="" class="text-white whatsapp-link" >Order On Whatsapp</a></li>
         </ul>
     </div>
@@ -35,10 +35,10 @@
 <nav class="navbar navbar-expand-md navbar-light nav-background mt-3 mb-5 pb-5 mx-5">
   
             <a class="navbar-brand px-5" href=""><img src="{{ asset('/images\cropped-Untitled-design-2.png') }}" height="70px"  alt="logo"> <a>
-            <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler " type="button"   data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center  " id="navbarNav">
+            <div class="collapse navbar-collapse justify-content-center "   id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item link">
                   <a class="nav-link  text-black" href="">Contact</a>
@@ -47,11 +47,11 @@
                   <a class="nav-link text-black" href="">Blog</a>
                 </li>
                 <li class="nav-item link">
-                  <a class="nav-link text-black" href="">About Us</a>
+                  <a class="nav-link text-black" href="#about">About Us</a>
                 </li>
                 
                 <li class="nav-item link">
-                  <a class="nav-link bg-danger text-white rounded " href="">Services</a>
+                  <a class="nav-link bg-danger text-white rounded " href="">Check Out</a>
                 </li>
               </ul>
             
@@ -129,17 +129,17 @@
 </div>
 <!--About Us!-->
 
-<div class="container mt-4">
+<div class="container mt-4" id="about">
     <h2 class="text-center animated-section text-primary animate__animated animate__slideUp animate__slow 2s animate__delay-.5s">Take my Online Class Help for Me</h2>
 
-<p class="text-center mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">MasterAssingmentHelp.com is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
+<p class="text-center mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">MasterAssignmentHelp.com is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
 
 
 <h2 class="text-center text-primary mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">Who We Are?</h2>
 <div class="row mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
     <div class="col text-center justify-content-center">
         <img src="{{ asset('/images/WhatsApp-Image-2023-11-10-at-1.06.22-PM.jpeg') }}" alt="ceo" height="150px" class="ceo-image ">
-        <h4 class="text-primary mt-3 mb-3">CEO MasterAssingmentHelp</h4>
+        <h4 class="text-primary mt-3 mb-3">CEO MasterAssignmentHelp</h4>
         <a href=""class="text-white whatsapp-link bg-primary rounded px-2 pb-2 pt-2 mt-5">WhatsApp Now!</a>
     </div>
     <div class="col">
@@ -183,7 +183,7 @@ Team Management
   </div>  
 
   <div class="container-fluid mt-5">
-    <h2 class="text-center text-primary">Why Choose MasterAssingmentHelp?</h2>
+    <h2 class="text-center text-primary">Why Choose MasterAssignmentHelp?</h2>
     <p class="mt-3">Our following features will help you to decide why should you choose us. The following features makes us unique and prominent in the industry and students always prefer MasterAssignmentHelp over others. If you are visiting us first time, just discuss your project on the given Whatsapp, negotiate, and get your task done. Check our following unparalleled characteristics and  decide yourself. </p>
 
   </div>
@@ -362,6 +362,64 @@ text-center text-primary">What Students Say About Us</h2>
 
 </div>
 
+
+
+
+<!--footer--><div class="container-fluid mt-5 border-top">
+  <div class="row mt-3">
+
+<div class="col"><img src="{{ asset('/images/logo.svg') }}" height="50px"  alt="logo" ></div>
+<div class="col">
+  <h3 class="default-color pt-2">ABOUT JAMBOJET</h3>
+  
+
+
+
+
+
+
+
+<ul class="links" >
+  <li><a href="#" class="links">Our story</a></li>
+  <li><a href="#" class="links">Press Room</a></li>
+  <li><a href="#" class="links">Advertise with Jambojet</a></li>
+  <li><a href="#" class="links">Careers</a></li>
+  <li><a href="#" class="links">Jambojet Sustainability</a></li>
+  <li><a href="#" class="links">On Time Performance</a></li>
+  <li><a href="#" class="links">Our Fleet</a></li>
+  <li><a href="#" class="links">Offices</a></li>
+</ul>
+</div>
+<div class="col">
+  <h3 class="default-color pt-2">OUR PRODUCTS</h3>
+<ul class="links">
+  <li><a href="#" class="links">Jambojet Cargo</a></li>
+  <li><a href="#" class="links">Jambojet Rewards</a></li>
+  <li><a href="#"class="links">Jambojet Charters</a></li>
+  <li><a href="#" class="links">Jambojet Shukrani</a></li>
+  <li><a href="#" class="links">Jaza Pole Pole</a></li>
+  <li><a href="#" class="links">Jambojet Groups</a></li>
+</ul>
+</div>
+<div class="col">
+<h3 class="default-color pt-2">SELF CARE/SUPPORT</h3>
+<ul class="links">
+  <li><a href="#" class="links">Manage Booking</a></li>
+  <li><a href="#" class="links">Online check-in</a></li>
+  <li><a href="#" class="links">Refund Form</a></li>
+  <li><a href="#" class="links">Business Partner</a></li>
+  <li><a href="#" class="links">FAQs</a></li>
+  <li><a href="#" class="links">Contact us</a></li>
+  <li><a href="#" class="links">Terms and Conditions</a></li>
+  <li><a href="#" class="links">Privacy Policy</a></li>
+  <li><a href="#" class="links">Jambojet Connect (Intranet)</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
 </body>
 <script src="{{ asset('/js/index.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -369,4 +427,7 @@ text-center text-primary">What Students Say About Us</h2>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+
 </html>
