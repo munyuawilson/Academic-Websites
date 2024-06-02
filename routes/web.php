@@ -15,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
+//Route::get('/order',['as'=> '','uses'=> '']);
+Route::get('/order', function () {return view('/order');})->name("order");
