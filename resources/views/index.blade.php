@@ -36,31 +36,31 @@
     </div>
     </nav>
 
-<nav class="navbar navbar-expand-md navbar-light nav-background mt-3 mb-5 pb-5 mx-5 px-4">
-  
-            <a class="navbar-brand px-5" href=""><img src="{{ asset('/images\cropped-Untitled-design-2.png') }}" height="70px"  alt="logo"> <a>
-            <button class="navbar-toggler " type="button"   data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end"   id="navbarSupportedContent">
-              <ul class="navbar-nav mx-3">
-                <li class="nav-item link">
-                  <a class="nav-link  text-black" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item link">
-                  <a class="nav-link text-black" href="">Blog</a>
-                </li>
-                <li class="nav-item link">
-                  <a class="nav-link text-black" href="#about">About Us</a>
-                </li>
-                
-                <li class="nav-item link">
-                  <a class="nav-link nav-bg text-white rounded " href="{{route('order')}}">Check Out</a>
-                </li>
-              </ul>
-            
-            </div>
-          </nav>
+    <nav class="navbar navbar-expand-md navbar-light nav-background mt-3 mb-5 pb-5 mx-5 px-4">
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-8">
+        <a class="navbar-brand" href="#"><img src="{{ asset('/images/cropped-Untitled-design-2.png') }}" class="img-fluid" alt="logo"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-3">
+            <li class="nav-item link">
+                <a class="nav-link text-black" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item link">
+                <a class="nav-link text-black" href="#">Blog</a>
+            </li>
+            <li class="nav-item link">
+                <a class="nav-link text-black" href="#about">About Us</a>
+            </li>
+            <li class="nav-item link">
+                <a class="nav-link nav-bg text-white rounded" href="{{ route('order') }}">Order Now</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 
 
 <!--second section!-->
@@ -199,7 +199,7 @@
 <p class="mt-5 pt-5 text-center text-white">Our Assignment Helpers are always up to mitigate the educational stress of students all over the world. You can check our these services or contact us via given WhatsApp and get an instant solution. </p>
 </div>
 <div class="col-md mt-3 text-center">
-  <img src="{{ asset('/images/Capture-removebg-preview.png') }}" alt="" class="pt-5 ">
+  <img src="{{ asset('/images/Capture-removebg-preview.png') }}" alt="" class="pt-5 " height="350px">
 </div>
 
 </div>
@@ -215,7 +215,7 @@
 
 <div class="container border  mt-5  animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
   <div class="row">
-    <div class="col ">
+    <div class="col">
       <div class="row">
       <div class="col">
       <ul class="list">
@@ -251,7 +251,7 @@
       </div>
       </div>
     </div>
-    <div class="col-md  text-center mt-3">
+    <div class="col-md text-center mt-3">
       <img src="{{ asset('/images/6d897e8c-2bff-4237-8e9d-a57620e64fcb.jpg') }}" alt="img" height="200px">
     </div>
   </div>
@@ -317,14 +317,14 @@
 </div>
 
 
-<div class="container mt-5 animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s" id="testimonials">
+<div class="container mt-5 animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s text-center" id="testimonials">
     <h2 class="
 text-center text-primary">What Students Say About Us</h2>
 
-    <div class="container mt-5">
+    <div class="container mt-5 justify-content-center text-center">
         <div class="row">
-            <div class="col">
-                <div class="card">
+            <div class="col-xl-3 col-lg-3 col-md-3 text-center mt-3">
+                <div class="card text-center">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
                             alt="" class="profile">
@@ -340,13 +340,13 @@ text-center text-primary">What Students Say About Us</h2>
 
 
                         </div>
-                        <span class="material-symbols-outlined px-5 py-2">
+                        <span class="material-symbols-outlined px-2 py-2">
                             format_quote
                             </span>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-xl-3 col-lg-3 col-md-3 mt-3 text-center">
                 <div class="card">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
@@ -361,13 +361,13 @@ text-center text-primary">What Students Say About Us</h2>
                         <div class="testimonial">
                             "Amazing work. worked done as they promised in conversation. I got an A grade on that assignment. All the process was stress free. love to work again"
                         </div>
-                        <span class="material-symbols-outlined px-5 py-2">
+                        <span class="material-symbols-outlined px-2 py-2">
                             format_quote
                             </span>
                     </div>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-xl-3 col-lg-3 col-md-3mt-3 justify-content-center text-center">
                 <div class="card">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1614574762522-6ac2fbba2208?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjY2fHxtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
@@ -382,7 +382,7 @@ text-center text-primary">What Students Say About Us</h2>
                         <div class="testimonial ">
                             "Amazing work. worked done as they promised in conversation. I got an A grade on that assignment. All the process was stress free. love to work again"
                         </div>
-                        <span class="material-symbols-outlined px-5 py-2">
+                        <span class="material-symbols-outlined py-2">
                             format_quote
                             </span>
                     </div>
@@ -397,12 +397,12 @@ text-center text-primary">What Students Say About Us</h2>
 
 
 
-<!--footer--><div class="container-fluid mt-5 border-top " id="contact">
+<!--footer--><div class="container-fluid mt-5 border-top justify-content-center text-danger" id="contact">
   <div class="row mt-3 text-black">
 
-<div class="col"><img src="{{ asset('/images\cropped-Untitled-design-2.png') }}" height="70px"  alt="logo"></div>
-<div class="col">
-  <h3 class="default-color pt-2">About Us</h3>
+<div class="col-xl-3 col-lg-3 col-md-3 text-center"><img src="{{ asset('/images\cropped-Untitled-design-2.png') }}" height="70px"  alt="logo"></div>
+<div class="col-xl-3 col-lg-3 col-md-3 text-center">
+  <h3 class="default-color pt-2 text-center">About Us</h3>
 
 
 
@@ -411,13 +411,13 @@ text-center text-primary">What Students Say About Us</h2>
 
 
 <ul class="links" >
-  <li><a href="#about" class="links">Our story</a></li>
+  <li><a href="#about" class="links text-center">Our story</a></li>
  
 
 </ul>
 </div>
-<div class="col">
-  <h3 class="default-color pt-2">Our Services</h3>
+<div class="col-xl-3 col-lg-3 col-md-3 text-center">
+  <h3 class="default-color pt-2 text-center">Our Services</h3>
 <ul class="links">
   <li><a href="#" class="links">Assignment Writing</a></li>
   <li><a href="#" class="links">Essay Writing</a></li>
@@ -431,7 +431,7 @@ text-center text-primary">What Students Say About Us</h2>
   
 </ul>
 </div>
-<div class="col">
+<div class="col-xl-3 col-lg-3 col-md-3 text-center">
 <h3 class="default-color pt-2">Self Care/Support</h3>
 <ul class="links">
   <li><a href="#" class="links"> <i class="fab fa-whatsapp text-success"></i> +19143174571</a></li>
