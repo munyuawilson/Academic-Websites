@@ -79,7 +79,7 @@
         <h3 class="text-center">Your Gateway to Stress-Free Assignments 
 </h3>
 <div class="justify-content-center text-center mt-5">
-        <a href="" class="nav-bg pt-2 pb-2 whatsapp-link rounded text-white px-2">Whatsapp Now</a>
+        <a href="https://wa.me/message/DX4EZYSMFHSJP1" class="nav-bg pt-2 pb-2 whatsapp-link rounded text-white px-2">Whatsapp Now</a>
         </div>
 
 
@@ -146,7 +146,7 @@
     <div class="col text-center justify-content-center">
         <img src="{{ asset('/images/WhatsApp-Image-2023-11-10-at-1.06.22-PM.jpeg') }}" alt="ceo" height="150px" class="ceo-image ">
         <h4 class=" mt-5 mb-3 fav-color">CEO MasterAssignmentHelp</h4>
-        <div class="mt-5"> <a href=""class="text-white whatsapp-link  rounded px-2 pb-2 pt-2  nav-bg">WhatsApp Now!</a></div>
+        <div class="mt-5"> <a href="https://wa.me/message/DX4EZYSMFHSJP1"class="text-white whatsapp-link  rounded px-2 pb-2 pt-2  nav-bg">WhatsApp Now!</a></div>
        
     </div>
     <div class="col-md-3 mt-3">
@@ -436,8 +436,8 @@ text-center text-primary">What Students Say About Us</h2>
 <div class="col-xl-3 col-lg-3 col-md-3 text-center">
 <h3 class="default-color pt-2">Self Care/Support</h3>
 <ul class="links">
-  <li><a href="#" class="links"> <i class="fab fa-whatsapp text-success"></i> +19143174571</a></li>
-  <li><a href="#" class="links"><i class="fas fa-envelope text-danger"></i> Mastersassignmenth@gmail.com</a></li>
+  <li><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="links"> <i class="fab fa-whatsapp text-success"> </i>+19143174571</a></li>
+  <li><a href="" class="links"><i class="fas fa-envelope text-danger"></i> Mastersassignmenth@gmail.com</a></li>
   <li><a href="#" class="links">Refund Policy</a></li>
   <li><a href="#" class="links">Order Cancellation Policy</a></li>
   <li><a href="#" class="links">Terms and Conditions</a></li>
