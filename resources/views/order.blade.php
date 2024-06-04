@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Assignment Help: Assignment Help Online for Students</title>
+<meta name="description" content="MasterAssignmentHelp.com provides online assignment help for students. Our team of experts can help you with essays, online classes, exams, projects, and more. Get high grades and reduce stress with our affordable services. Contact us on WhatsApp today!" />
+<meta name="keywords" content="assignment help, online classes, essays, exams, projects, homework help, dissertation writing, thesis writing, online tutoring, affordable assignment help" />
     <title>New Order Form</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -37,7 +40,7 @@
 
         <link rel="stylesheet" type="text/css" href="https://orders.superioressays.org/css/messaging/messaging.css">
         
-        
+        <link rel="shortcut icon" href="{{ asset('/images/favicon.png') }}" type="image/x-icon">
         
         <script>
             Dropzone.autoDiscover = false;
@@ -75,7 +78,7 @@
 </li>
             
             <li class="nav-item px-2 pt-2">Mastersassignmenth@gmail.com </li>
-            <li class="nav-item px-2 rounded bg-success pt-2 pb-2 "><a href="" class="text-white whatsapp-link" >Order On Whatsapp</a></li>
+            <li class="nav-item px-2 rounded bg-success pt-2 pb-2 "><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="text-white whatsapp-link" >Order On Whatsapp</a></li>
         </ul>
     </div>
     </nav>
