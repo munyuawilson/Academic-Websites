@@ -85,7 +85,9 @@
 
 <nav class="navbar navbar-expand-md navbar-light mt-3 mb-5 pb-5 mx-5">
   
-            <a class="navbar-brand px-5" href=""><img src="{{ asset('/images\cropped-Untitled-design-2.png') }}" height="70px"  alt="logo"> <a>
+<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-8">
+        <a class="navbar-brand" href="#"><img src="{{ asset('/images/logo.png') }}" class="img-fluid" alt="logo"></a>
+    </div>
             <button class="navbar-toggler " type="button"   data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -106,11 +108,13 @@
             
             </div>
           </nav>
-
+<div class="row">
 <div id="orderFormApp" class="container col mt-4">
+    
+    
     <form id="main_new_order" method="post" action="https://orders.superioressays.org/new" class="form-horizontal ajax-pssdost row">
 
-        
+        @csrf 
             <div v-bind:class="{ 'hiddenPart': preview == true }">
                 <input type="hidden" name="_token" value="QvIDy7TfyHjwluKpWOVngNe8jWwMjNBeW04eqmnZ">
                 <input type="hidden" name="user_id" value="">
@@ -504,7 +508,7 @@
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info" id="decrementBtn">−</button>
             </span>
-            <input type="number" required="required" min="0" name="pages" class="form-control border-info" id="pageInput" style="max-width: 80px;">
+            <input type="number" required="required" min="0" name="pages" class="form-control border-info" id="pageInput" style="max-width: 80px;" oninput="updateEstimate()">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info" id="incrementBtn"><i class="fa fa-plus"></i></button>
             </span>
@@ -525,7 +529,7 @@
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info decrementSourcesBtn" id="decrementSourcesBtn">−</button>
             </span>
-            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput">
+            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput" oninput="updateEstimate()">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info" id="incrementSourcesBtn"><i class="fa fa-plus"></i></button>
             </span>
@@ -539,7 +543,7 @@
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info decrementSourcesBtn" id="decrementSourcesBtn">−</button>
             </span>
-            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput">
+            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput" oninput="updateEstimate()">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info" id="incrementSourcesBtn"><i class="fa fa-plus"></i></button>
             </span>
@@ -597,9 +601,17 @@
                     </div>
                 </div>
             </div>
+        
+        
+<div class="form-group text-center">
+    <input type="submit" value="Checkout" class="btn nav-bg text-white checkout">
+</div>
+        </form>
         </div>
         <div class="col-md-4"><div class="order_summary"><h5>Cost Breakdown</h5> <table class="table table-border-style summary_table"><tbody><tr><td>
-                2 Pages X $14
+               <span id="pages"></span> Pages X $15
+           
+           <script></script>
             </td> <th>
                 28.00
             </th></tr> <!----> <!----> <!---->  <!----> <tr><th>
@@ -609,7 +621,7 @@
             </th></tr> <tr><td colspan="2" style="font-size: large;">DISCOUNT CODE<br> <code style="font-size: 25px;">10OFF</code></td></tr> <tr><th colspan="2" align="right"><span>Have a discount code?</span> <input type="text" placeholder="Enter here" class="form-control"> <button type="button" class="btn btn-sm btn-success"><i class="fa fa-check"></i> Apply</button> <!----></th></tr></tbody></table> <input type="hidden" name="amount" value="28"> <hr> <!----> <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-eye"></i> Preview
     </button></div></div>
 
-        </form>
+        </div>
         <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -661,206 +673,31 @@ s0.parentNode.insertBefore(s1,s0);
     updateWordCount();
 </script>
 <script>
-    $(document).ready(function () {
-    // Define costs
-    const costs = {
-        page: 18,
-        slide: 13,
-        chart: 3,
-        writerCategories: {
-            standard: 0,
-            silver: 7,
-            gold: 10,
-            platinum: 14
-        }
-    };
-
-    // Utility function to update cost breakdown
-    function updateCost() {
-        let pages = parseInt($('#pagesInput').val());
-        let slides = parseInt($('#slidesInput').val());
-        let charts = parseInt($('#chartsInput').val());
-
-        let writerCategoryPrice = parseFloat($('.writer_category_button.active').data('category-price')) || 0;
-
-        let pageCost = pages * costs.page;
-        let slideCost = slides * costs.slide;
-        let chartCost = charts * costs.chart;
-
-        let totalCost = pageCost + slideCost + chartCost + writerCategoryPrice;
-
-        // Update cost details
-        $('#costDetails').html(`${pages} Pages X $${costs.page} + ${slides} Slides X $${costs.slide} + ${charts} Charts X $${costs.chart} + Writer Category Cost $${writerCategoryPrice}`);
-        $('#costAmount').html(totalCost.toFixed(2));
-        $('#totalCost').html(totalCost.toFixed(2));
-        $('#hiddenAmount').val(totalCost.toFixed(2));
-    }
-
-    // Event listeners
-    $('#pagesInput, #slidesInput, #chartsInput').on('input', updateCost);
     
-    $('.writer_category_button').on('click', function () {
-        $('.writer_category_button').removeClass('active');
-        $(this).addClass('active');
-        updateCost();
-    });
+function updateEstimate() {
+    const pages = document.getElementById('pageInput').value;
+    const price = document.getElementById('price').value;
+    const discount = document.getElementById('discount').value;
 
-    // Initialize cost on page load
-    updateCost();
+    console.log(pages);
 
-    // Increment and decrement buttons
-    $('#incrementPagesBtn').on('click', function () {
-        let pages = parseInt($('#pagesInput').val());
-        $('#pagesInput').val(pages + 1);
-        updateCost();
-    });
+    let totalCost = quantity * price;
+    totalCost -= totalCost * (discount / 100);
 
-    $('#decrementPagesBtn').on('click', function () {
-        let pages = parseInt($('#pagesInput').val());
-        if (pages > 0) {
-            $('#pagesInput').val(pages - 1);
-            updateCost();
-        }
-    });
-
-    $('#incrementSlidesBtn').on('click', function () {
-        let slides = parseInt($('#slidesInput').val());
-        $('#slidesInput').val(slides + 1);
-        updateCost();
-    });
-
-    $('#decrementSlidesBtn').on('click', function () {
-        let slides = parseInt($('#slidesInput').val());
-        if (slides > 0) {
-            $('#slidesInput').val(slides - 1);
-            updateCost();
-        }
-    });
-
-    $('#incrementChartsBtn').on('click', function () {
-        let charts = parseInt($('#chartsInput').val());
-        $('#chartsInput').val(charts + 1);
-        updateCost();
-    });
-
-    $('#decrementChartsBtn').on('click', function () {
-        let charts = parseInt($('#chartsInput').val());
-        if (charts > 0) {
-            $('#chartsInput').val(charts - 1);
-            updateCost();
-        }
-    });
-
-    // Add similar handlers for other increment and decrement buttons if necessary
-});
-
-</script>
-
-
-<script>
-    // Base prices and multipliers
-const basePricePerPage = 10; // base price per page in dollars
-const urgencyMultipliers = {
-    "14 Days": 1,
-    "10 Days": 1.1,
-    "7 Days": 1.2,
-    "5 Days": 1.3,
-    "3 Days": 1.4,
-    "2 Days": 1.5,
-    "36 Hours": 1.6,
-    "24 Hours": 1.7,
-    "12 Hours": 1.8,
-    "6 hours": 1.9,
-    "30 days": 0.9
-};
-const writerCategoryMultipliers = {
-    1: 1,
-    2: 1.2,
-    3: 1.3,
-    4: 1.4
-};
-const additionalFeatureCosts = {
-    1: 5, // cost for Unlimited Revisions
-    2: 10 // cost for Tip for Writer or Support Agent
-};
-
-// Function to calculate total cost
-function calculateCost() {
-    const pages = parseInt(document.querySelector('input[name="pages"]').value) || 0;
-    const sources = parseInt(document.querySelector('input[name="sources"]').value) || 0;
-    const charts = parseInt(document.querySelector('input[name="charts"]').value) || 0;
-    const slides = parseInt(document.querySelector('input[name="slides"]').value) || 0;
-
-    const urgency = document.querySelector('input[name="urgency_id"]:checked').value;
-    const writerCategory = parseInt(document.querySelector('input[name="writer_category_id"]:checked').value);
-    
-    const additionalFeatures = Array.from(document.querySelectorAll('input[name="feature_ids[]"]:checked'))
-                                    .map(feature => parseInt(feature.value));
-
-    const spacing = document.querySelector('input[name="spacing"]:checked').value;
-    const wordsPerPage = spacing === "double" ? 550 : 1100;
-
-    let baseCost = pages * basePricePerPage * urgencyMultipliers[urgency] * writerCategoryMultipliers[writerCategory];
-    additionalFeatures.forEach(feature => {
-        baseCost += additionalFeatureCosts[feature];
-    });
-
-    document.getElementById('totalCost').innerText = `Total Cost: $${baseCost.toFixed(2)}`;
+    document.getElementById('pages').innerText = pages;
 }
 
-// Event listeners for all form inputs
-document.querySelectorAll('input[name="pages"], input[name="sources"], input[name="charts"], input[name="slides"], input[name="urgency_id"], input[name="writer_category_id"], input[name="feature_ids[]"], input[name="spacing"]').forEach(input => {
-    input.addEventListener('change', calculateCost);
-});
 
-// Initial calculation
-calculateCost();
+console.log("hello");
+document.addEventListener('DOMContentLoaded', function() {
+        updateEstimate();
 
+        // Attach event listeners
+        document.getElementById('pageInput').addEventListener('input', updateEstimate);
+        });
 </script>
 
-
-<script>
-    // Get references to the inputs and buttons using classes
-    var sourcesInputs = document.querySelectorAll('.sources-input');
-    var decrementSourcesBtns = document.querySelectorAll('.decrement-sources-btn');
-    var incrementSourcesBtns = document.querySelectorAll('.increment-sources-btn');
-
-    // Define a function to update the number of sources
-    function updateSources(event) {
-        // Find the corresponding input field
-        var sourcesInput = event.target.parentElement.querySelector('.sources-input');
-        // No need to update the sources, just leaving it here as a placeholder
-    }
-
-    // Attach event listeners to the buttons
-    decrementSourcesBtns.forEach(function(btn) {
-        btn.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default button behavior
-            var sourcesInput = event.target.parentElement.querySelector('.sources-input');
-            sourcesInput.stepDown(); // Decrement the value of the input field
-            updateSources(event); // Update the number of sources
-        });
-    });
-
-    incrementSourcesBtns.forEach(function(btn) {
-        btn.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default button behavior
-            var sourcesInput = event.target.parentElement.querySelector('.sources-input');
-            sourcesInput.stepUp(); // Increment the value of the input field
-            updateSources(event); // Update the number of sources
-        });
-    });
-
-    // Update the number of sources when the input field value changes
-    sourcesInputs.forEach(function(input) {
-        input.addEventListener('input', updateSources);
-    });
-
-    // Update the number of sources initially for each input
-    sourcesInputs.forEach(function(input) {
-        updateSources({target: input}); // Pass an event-like object with the input as target
-    });
-</script>
+<script src="{{asset('js\app.js')}}"></script>
 
 
         <script src="https://orders.superioressays.org/js/fontawesome.min.js"></script>

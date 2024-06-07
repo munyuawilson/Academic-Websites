@@ -1,12 +1,16 @@
 .navbar-navi{
     text-decoration: none;
 
+
     display: inline-block;
 }
 .whatsapp-link{
 
 
     text-decoration: none;
+}
+.checkout:hover{
+  background-color: black;
 }
 .nav-bg{
 
