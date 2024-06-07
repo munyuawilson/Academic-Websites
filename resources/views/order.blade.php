@@ -112,14 +112,15 @@
 <div id="orderFormApp" class="container col mt-4">
     
     
-    <form id="main_new_order" method="post" action="https://orders.superioressays.org/new" class="form-horizontal ajax-pssdost row">
+    <form id="main_new_order" method="POST" action="{{route('confirm-order')}}" class="form-horizontal ajax-pssdost row">
 
-        @csrf 
-            <div v-bind:class="{ 'hiddenPart': preview == true }">
-                <input type="hidden" name="_token" value="QvIDy7TfyHjwluKpWOVngNe8jWwMjNBeW04eqmnZ">
-                <input type="hidden" name="user_id" value="">
-                <input type="hidden" name="form_model" value="App\Models\Core\Order">
-
+   
+        {{ method_field('POST') }}
+        @csrf
+        @csrf
+   
+            <div v-bind:class="">
+                
                 <div class="rc-orderform">
                     <div class="rc-orderform__step">
                         <div class="rc-orderform__step-flag">
@@ -130,7 +131,7 @@
                                 <label class="col-md-2 control-label">Academic Level: </label>
                                 <div class="col-md-9">
                                     <span v-for="academic_level in academic_levels">
-                                        <input v-on:change="setUrgencies" class='' v-model="academic_id" type="radio" :id="" name="academic_id" :value="Masters">
+                                        <input v-on:change="setUrgencies" class='' v-model="academic_id" type="radio" :id="" name="academic_level" :value="Masters">
                                         <label :for=""> Masters</label>
                                     </span>
                                 </div>
@@ -138,7 +139,7 @@
                             <div class="form-group row">
                                 <label class="col-md-2 control-label">Type of Paper: </label>
                                 <div class="col-md-9">
-                                <select name="document_id" required="required" class="form-control">
+                                <select name="paper_type" required="required" class="form-control">
     <option value="Essay">Essay</option>
     <option value="Term Paper">Term Paper</option>
     <option value="Multiple Choice Questions (Time-framed)">Multiple Choice Questions (Time-framed)</option>
@@ -270,7 +271,7 @@
     <option value="Company Analysis">Company Analysis</option>
     <option value="Pedagogy">Pedagogy</option>
     <option value="">Journalism</option>
-    <option value="Computer Scienc">Computer Scienc</option>
+    <option value="Computer Scienc">Computer Science</option>
     <option value="Aeronautics">Aeronautics</option>
     <option value="Asian Literature">Asian Literature</option>
     <option value="Native-American Studies">Native-American Studies</option>
@@ -543,7 +544,7 @@
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info decrementSourcesBtn" id="decrementSourcesBtn">−</button>
             </span>
-            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput" oninput="updateEstimate()">
+            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput" oninput="updateEstimate()" required>
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info" id="incrementSourcesBtn"><i class="fa fa-plus"></i></button>
             </span>
@@ -557,7 +558,7 @@
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info decrementSourcesBtn" id="decrementSourcesBtn">−</button>
             </span>
-            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput">
+            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" id="sourcesInput" required>
             <span class="input-group-btn">
                 <button type="button" class="btn btn-outline-info" id="incrementSourcesBtn"><i class="fa fa-plus"></i></button>
             </span>
