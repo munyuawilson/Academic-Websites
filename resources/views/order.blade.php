@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="eng">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Assignment Help: Assignment Help Online for Students</title>
+    
 <meta name="description" content="MasterAssignmentHelp.com provides online assignment help for students. Our team of experts can help you with essays, online classes, exams, projects, and more. Get high grades and reduce stress with our affordable services. Contact us on WhatsApp today!" />
 <meta name="keywords" content="assignment help, online classes, essays, exams, projects, homework help, dissertation writing, thesis writing, online tutoring, affordable assignment help" />
-    <title>New Order Form</title>
+<meta name="csrf-token" content="{{ csrf_token() }}">  
+
+<title>New Order Form</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
@@ -45,12 +47,9 @@
         <script>
             Dropzone.autoDiscover = false;
         </script>
-        <script>
-            window.current_user_id = 
-                window.message_audio = 'https://orders.superioressays.org/sounds/order_message.mp3';
-        </script>
+        
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    
     <style>
         .hiddenPart {
             display: none;
@@ -112,12 +111,15 @@
 <div id="orderFormApp" class="container col mt-4">
     
     
-    <form id="main_new_order" method="POST" action="{{route('confirm-order')}}" class="form-horizontal ajax-pssdost row">
+    <form id="main_new_order" method="POST" action="/confirm-order" class="form-horizontal ajax-pssdost row">
 
    
         {{ method_field('POST') }}
         @csrf
-        @csrf
+       
+        <input type='hidden' name='_token' value='{{ csrf_token() }}'>
+
+
    
             <div v-bind:class="">
                 
@@ -607,8 +609,21 @@
 <div class="form-group text-center">
     <input type="submit" value="Checkout" class="btn nav-bg text-white checkout">
 </div>
+
         </form>
+        <!--Paypal-->
+           
+    <div id="paypal-button-container mt-5"></div>
+    <p id="result-message"></p>
+    
+
+    
         </div>
+
+    
+  
+
+
         <div class="col-md-4"><div class="order_summary"><h5>Cost Breakdown</h5> <table class="table table-border-style summary_table"><tbody><tr><td>
                <span id="pages"></span> Pages X $15
            
@@ -623,6 +638,7 @@
     </button></div></div>
 
         </div>
+
         <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -635,7 +651,62 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+    <!-- Initialize the JS-SDK -->
+    
+    <script
+      src="https://www.paypal.com/sdk/js?client-id=test&buyer- 
+      country=US&currency=USD&components=buttons&enable-funding=venmo"
+      data-sdk-integration-source="developer-studio"
+    ></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '0.01' // Replace with the actual amount
+                            }
+                        }]
+                    });
+                },
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        document.getElementById('result-message').innerText = 'Transaction completed by ' + details.payer.name.given_name;
+                    });
+                }
+            }).render('#paypal-button-container'); // Display payment button on your web page
+        });
+    </script>
+    
 <!--End of Tawk.to Script-->
+
+<script>
+    
+function updateEstimate() {
+    const pages = document.getElementById('pageInput').value;
+    const price = document.getElementById('price').value;
+    const discount = document.getElementById('discount').value;
+
+    console.log(pages);
+
+    let totalCost = quantity * price;
+    totalCost -= totalCost * (discount / 100);
+
+    document.getElementById('pages').innerText = pages;
+}
+
+
+console.log("hello");
+document.addEventListener('DOMContentLoaded', function() {
+        updateEstimate();
+
+        // Attach event listeners
+        document.getElementById('pageInput').addEventListener('input', updateEstimate);
+        });
+</script>
+
         
         </body>
         
@@ -673,41 +744,14 @@ s0.parentNode.insertBefore(s1,s0);
     // Update the word count initially
     updateWordCount();
 </script>
-<script>
-    
-function updateEstimate() {
-    const pages = document.getElementById('pageInput').value;
-    const price = document.getElementById('price').value;
-    const discount = document.getElementById('discount').value;
-
-    console.log(pages);
-
-    let totalCost = quantity * price;
-    totalCost -= totalCost * (discount / 100);
-
-    document.getElementById('pages').innerText = pages;
-}
-
-
-console.log("hello");
-document.addEventListener('DOMContentLoaded', function() {
-        updateEstimate();
-
-        // Attach event listeners
-        document.getElementById('pageInput').addEventListener('input', updateEstimate);
-        });
-</script>
 
 <script src="{{asset('js\app.js')}}"></script>
 
 
-        <script src="https://orders.superioressays.org/js/fontawesome.min.js"></script>
-    <script src="https://orders.superioressays.org/js/jquery.history.js"></script>
-    <script src="https://orders.superioressays.org/js/jquery.form.js"></script>
-
-
-    <script src="https://orders.superioressays.org/sweetalert/dist/sweetalert.min.js"></script>
+  
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-        </html>
+        
+    
+    </html>

@@ -14,3 +14,4 @@ function updateEstimate() {
 
 document.addEventListener('DOMContentLoaded', updateEstimate);
 console.log("hello")
+

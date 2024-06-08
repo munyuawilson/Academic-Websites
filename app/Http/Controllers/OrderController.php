@@ -1,11 +1,23 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\CustomMailer;
+use Illuminate\Support\Facades\Mail;
+
+
 
 class OrderController extends Controller
 {
+    protected $mailer;
+
+    public function __construct(CustomMailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
+
     public function order(Request $request){
         
         
@@ -27,6 +39,7 @@ class OrderController extends Controller
         $slides = $request->get('slides');
         $writerCategoryId = $request->get('writer_category_id');
         $featureIds = $request->get('feature_ids', []);
+        
 
 
 
@@ -48,10 +61,15 @@ class OrderController extends Controller
             'slides' => $slides,
             'writer_category_id' => $writerCategoryId,
             'feature_ids' => $featureIds,
+
+
+            //add email
         ];
-    
-        // Return the data as JSON response
-        return response()->json( $data );
+        $to = 'irenemunyua91@gmail.com';
+        $subject = 'New Order Details';
+        $this->mailer->sendEmail($to, $subject, "hello");
+        
+    return response()->json( $data );
 
 
 
