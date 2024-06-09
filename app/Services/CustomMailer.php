@@ -18,7 +18,7 @@ class CustomMailer
     protected function setup()
     {
         $this->mail->isSMTP();
-        $this->mail->Host = env('MAIL_HOST', 'smtp.example.com');
+        $this->mail->Host = env('MAIL_HOST', 'smtp.gmail.com');
         $this->mail->SMTPAuth = true;
         $this->mail->Username = env('MAIL_USERNAME');
         $this->mail->Password = env('MAIL_PASSWORD');
