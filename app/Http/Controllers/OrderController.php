@@ -89,7 +89,7 @@ class OrderController extends Controller
         $htmlContent = $this->generateOrderEmailContent($data,$total_Price);
         $this->mailer->sendEmail($to, $subject, $htmlContent);*/
       
-       return redirect("www.paypal.com");
+       return redirect("/checkout");
        /* echo '<div id="paypal-button-container"></div>';
         echo '<p id="result-message"></p>';
         echo '<script src="https://www.paypal.com/sdk/js?client-id=test&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo" data-sdk-integration-source="developer-studio"></script>';
