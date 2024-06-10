@@ -113,7 +113,7 @@ s0.parentNode.insertBefore(s1,s0);
                         return actions.order.create({
                             purchase_units: [{
                                 amount: {
-                                    value: '{$total_Price}' ,
+                                    value: $total_price ,
                                     payee: {
                             email_address: 'Topessaytutors@gmail.com' 
                         }
@@ -130,6 +130,9 @@ s0.parentNode.insertBefore(s1,s0);
                 }).render('#paypal-button-container'); // Display payment button on your web page
             })
         </script>
+
+
+
 
 
 

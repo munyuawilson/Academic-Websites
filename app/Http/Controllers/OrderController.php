@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\CustomMailer;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Order;
 
 
 
@@ -43,9 +44,14 @@ class OrderController extends Controller
         $phone= $request->get('phone');
         $email= $request->get('email');
         
+        
+if ($writerCategoryId ==null) {  
+    $writerCategoryId = "Standard writer";
+
+}
 
 
-
+//save 
         $data = [
             'academic_id' => "Masters",
             'document_id' => $documentId,
@@ -68,28 +74,51 @@ class OrderController extends Controller
             'email'=> $email
 
 
-            //add email
+            
         ];
 //calculate the price
 
         $total_Price=$this->totalPrice($pages,$charts,$slides,$urgencyId);
         
 
+        $order = Order::create([
+            'academic_level_id' => "Masters",
+            'paper_type_id' => $request->get('paper_type'),
+            'subject_id' => $request->get('subject_id'),
+            'topic' => $request->get('topic'),
+            'instructions' => $request->get('instructions'),
+            'english_type' => $request->get('english_type'),
+            'style_id' => $request->get('style_id'),
+            'discount_amount' => $request->get('discount_amount'),
+            'discount_id' => $request->get('discount_id'),
+            'file_path' => $file,
+            'urgency_id' => $request->get('urgency_id'),
+            'pages' => $request->get('pages'),
+            'spacing' => $request->get('spacing'),
+            'sources' => $request->get('sources'),
+            'charts' => $request->get('charts'),
+            'slides' => $request->get('slides'),
+            'writer_category_id' => $request->get('writer_category_id'),
+            'feature_ids' => $request->get('feature_ids', []),
+            'phone' => $request->get('phone'),
+            'email' => $request->get('email'),
+            'total_price' => $total_Price
+        ]);
 
 
-
+        $orderId = $order->id;
         //send to the student
             $to = $email;
             $subject = 'New Order Details';
-            $htmlContent = $this->generateOrderEmailContent($data, $total_Price);
+            $htmlContent = $this->generateOrderEmailContent($data, $total_Price,$orderId);
             $this->mailer->sendEmail($to, $subject, $htmlContent,['wmunyua4@gmail.com',"Mastersassignmenth@gmail.com"]);
         //send to the site admin
       /*  $to = "Mastersassignmenth@gmail.com";
         $subject = 'New Order Details';
         $htmlContent = $this->generateOrderEmailContent($data,$total_Price);
         $this->mailer->sendEmail($to, $subject, $htmlContent);*/
-      
-       return redirect("/checkout");
+      return view("payment",['total_Price' => $total_Price]);
+       
        /* echo '<div id="paypal-button-container"></div>';
         echo '<p id="result-message"></p>';
         echo '<script src="https://www.paypal.com/sdk/js?client-id=test&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo" data-sdk-integration-source="developer-studio"></script>';
@@ -125,7 +154,7 @@ class OrderController extends Controller
 
 
     }
-    private function generateOrderEmailContent($data,$price) {
+    private function generateOrderEmailContent($data,$price,$orderID) {
         $htmlContent = '
         <html>
         <head>
@@ -150,6 +179,10 @@ class OrderController extends Controller
                 <tr>
                     <th>Academic Level</th>
                     <td>' . htmlspecialchars($data['academic_id']) . '</td>
+                </tr>
+                 <tr>
+                    <th>Order ID</th>
+                    <td>' . htmlspecialchars( $orderID). '</td>
                 </tr>
                 <tr>
                     <th>Paper Type</th>

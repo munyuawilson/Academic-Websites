@@ -104,9 +104,7 @@
                 <li class="nav-item link">
                   <a class="nav-link text-black" href="{{route('index')}}#about">About Us</a>
                 </li>
-                <li class="nav-item link">
-                  <a class="nav-link bg-primary text-white rounded text-black" href="{{route('index')}}#about">Paypal</a>
-                </li>
+                
                 
               </ul>
             
@@ -695,31 +693,7 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-    <!-- Initialize the JS-SDK -->
-    
-<script src="https://www.paypal.com/sdk/js?client-id=test&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo" data-sdk-integration-source="developer-studio"></script>
-
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            paypal.Buttons({
-                createOrder: function(data, actions) {
-                    return actions.order.create({
-                        purchase_units: [{
-                            amount: {
-                                value: '0.01' // Replace with the actual amount
-                            }
-                        }]
-                    });
-                },
-                onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(details) {
-                        document.getElementById('result-message').innerText = 'Transaction completed by ' + details.payer.name.given_name;
-                    });
-                }
-            }).render('#paypal-button-container'); // Display payment button on your web page
-        });
-    </script>
+  
     
 <!--End of Tawk.to Script-->
 
