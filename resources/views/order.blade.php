@@ -99,9 +99,14 @@
                   <a class="nav-link text-black" href="">Blog</a>
                 </li>
                 <li class="nav-item link">
+                  <a class="nav-link text-black" href="{{route('index')}}#faqs">Faqs</a>
+                </li>
+                <li class="nav-item link">
                   <a class="nav-link text-black" href="{{route('index')}}#about">About Us</a>
                 </li>
-                
+                <li class="nav-item link">
+                  <a class="nav-link bg-primary text-white rounded text-black" href="{{route('index')}}#about">Paypal</a>
+                </li>
                 
               </ul>
             
@@ -509,11 +514,11 @@
     <div class="col-md-3">
         <div class="input-group">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info" id="decrementBtn">−</button>
+                <button type="button" class="btn btn-outline-info decrementBtn" id="decrementBtn">−</button>
             </span>
-            <input type="number" required="required" min="0" name="pages" class="form-control border-info" id="pageInput" style="max-width: 80px;" oninput="updateEstimate()">
+            <input type="number" required="required" min="0" name="pages" class="form-control border-info pageInput" id="pageInput" style="max-width: 80px;" oninput="updateEstimate()">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info" id="incrementBtn"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn-outline-info incrementBtn" id="incrementBtn"><i class="fa fa-plus"></i></button>
             </span>
         </div>
         <strong class="text-info" id="wordCount">1100 Words</strong>
@@ -530,11 +535,11 @@
     <div class="col-md-5">
         <div class="input-group">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info decrementSourcesBtn" >−</button>
+                <button type="button" class="btn btn-outline-info decrementSourcesBtn decrementBtn" >−</button>
             </span>
-            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input" style="max-width: 80px;" oninput="updateEstimate()">
+            <input type="number" required="required" min="0" name="sources" class="form-control border-info sources-input pageInput" style="max-width: 80px;" oninput="updateEstimate()">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info" id="incrementSourcesBtn"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn-outline-info incrementBtn" ><i class="fa fa-plus"></i></button>
             </span>
         </div>
     </div>
@@ -544,11 +549,11 @@
     <div class="col-md-5">
         <div class="input-group">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info decrementSourcesBtn" >−</button>
+                <button type="button" class="btn btn-outline-info decrementSourcesBtn decrementBtn" >−</button>
             </span>
-            <input type="number" required="required" min="0" name="charts" class="form-control border-info sources-input" style="max-width: 80px;"  oninput="updateEstimate()" required>
+            <input type="number" required="required" min="0" name="charts" class="form-control border-info sources-input pageInput" style="max-width: 80px;"  oninput="updateEstimate()" required>
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info" id="incrementSourcesBtn"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn-outline-info incrementBtn" ><i class="fa fa-plus"></i></button>
             </span>
         </div>
     </div>
@@ -558,11 +563,11 @@
     <div class="col-md-5">
         <div class="input-group">
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info decrementSourcesBtn" >−</button>
+                <button type="button" class="btn btn-outline-info decrementSourcesBtn decrementBtn" >−</button>
             </span>
-            <input type="number" required="required" min="0" name="slides" class="form-control border-info sources-input" style="max-width: 80px;" required>
+            <input type="number" required="required" min="0" name="slides" class="form-control border-info sources-input pageInput" style="max-width: 80px;" required>
             <span class="input-group-btn">
-                <button type="button" class="btn btn-outline-info" id="incrementSourcesBtn"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn-outline-info incrementBtn" ><i class="fa fa-plus"></i></button>
             </span>
         </div>
     </div>
@@ -622,23 +627,60 @@
     
         </div>
 
+
+
+        <div class="col-md-4">
+            <div class="order_summary">
+                <h5>Cost Breakdown</h5>
+                <table class="table table-border-style summary_table">
+                    <tbody>
+                        <tr>
+                            <td><span id="pagesCount">0</span> Pages X $15</td>
+                            <th id="pagesCost">$0.00</th>
+                        </tr>
+                        <tr>
+                            <td><span id="sourcesCount">0</span> Sources X $0</td>
+                            <th id="sourcesCost">$0.00</th>
+                        </tr>
+                        <tr>
+                            <td><span id="chartsCount">0</span> Charts X $3</td>
+                            <th id="chartsCost">$0.00</th>
+                        </tr>
+                        <tr>
+                            <td><span id="slidesCount">0</span> PowerPoint Slides X $6</td>
+                            <th id="slidesCost">$0.00</th>
+                        </tr>
+                        <tr>
+                    <td>Deadline:</td>
+                    <th id="deadline">Not Specified</th>
+                </tr>
+                        <tr>
+                            <th>Total Cost:</th>
+                            <th id="totalCost">$0.00</th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="font-size: large;">DISCOUNT CODE<br> <code style="font-size: 25px;">10OFF</code></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2" align="right">
+                                <span>Have a discount code?</span>
+                                <input type="text" placeholder="Enter here" class="form-control">
+                                <button type="button" class="btn btn-sm btn-success"><i class="fa fa-check"></i> Apply</button>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+               
+                <hr>
+            
+            </div>
+        </div>
+
     
   
 
 
-        <div class="col-md-4"><div class="order_summary"><h5>Cost Breakdown</h5> <table class="table table-border-style summary_table"><tbody><tr><td>
-               <span id="pages"></span> Pages X $15
-           
-           <script></script>
-            </td> <th>
-                28.00
-            </th></tr> <!----> <!----> <!---->  <!----> <tr><th>
-                Total Cost:
-            </th> <th align="right"><select name="currency"><option value="USD">USD</option><option value="AUD">AUD</option><option value="CAD">CAD</option><option value="GBP">GBP</option><option value="EUR">EUR</option></select>
-                28.00
-            </th></tr> <tr><td colspan="2" style="font-size: large;">DISCOUNT CODE<br> <code style="font-size: 25px;">10OFF</code></td></tr> <tr><th colspan="2" align="right"><span>Have a discount code?</span> <input type="text" placeholder="Enter here" class="form-control"> <button type="button" class="btn btn-sm btn-success"><i class="fa fa-check"></i> Apply</button> <!----></th></tr></tbody></table> <input type="hidden" name="amount" value="28"> <hr> <!----> <button type="button" class="btn btn-primary btn-lg"><i class="fa fa-eye"></i> Preview
-    </button></div></div>
-
+        
         </div>
 
         <!--Start of Tawk.to Script-->
@@ -681,30 +723,6 @@ s0.parentNode.insertBefore(s1,s0);
     
 <!--End of Tawk.to Script-->
 
-<script>
-    
-function updateEstimate() {
-    const pages = document.getElementById('pageInput').value;
-    const price = document.getElementById('price').value;
-    const discount = document.getElementById('discount').value;
-
-    console.log(pages);
-
-    let totalCost = quantity * price;
-    totalCost -= totalCost * (discount / 100);
-
-    document.getElementById('pages').innerText = pages;
-}
-
-
-console.log("hello");
-document.addEventListener('DOMContentLoaded', function() {
-        updateEstimate();
-
-        // Attach event listeners
-        document.getElementById('pageInput').addEventListener('input', updateEstimate);
-        });
-</script>
 
         
         </body>
@@ -743,6 +761,87 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update the word count initially
     updateWordCount();
 </script>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var decrementButtons = document.getElementsByClassName('decrementBtn');
+            var incrementButtons = document.getElementsByClassName('incrementBtn');
+            var inputs = document.getElementsByClassName('pageInput');
+
+            // Function to decrement the input value
+            function decrementInput(event) {
+                var input = event.target.closest('.input-group').querySelector('.pageInput');
+                input.stepDown();
+                input.dispatchEvent(new Event('input')); // Trigger the input event
+            }
+
+            // Function to increment the input value
+            function incrementInput(event) {
+                var input = event.target.closest('.input-group').querySelector('.pageInput');
+                input.stepUp();
+                input.dispatchEvent(new Event('input')); // Trigger the input event
+            }
+
+            // Add event listeners to all decrement buttons
+            for (var i = 0; i < decrementButtons.length; i++) {
+                decrementButtons[i].addEventListener('click', decrementInput);
+            }
+
+            // Add event listeners to all increment buttons
+            for (var i = 0; i < incrementButtons.length; i++) {
+                incrementButtons[i].addEventListener('click', incrementInput);
+            }
+
+            // Add input event listener to all input fields
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('input', function() {
+                    updateCost(); // Update cost calculation
+                });
+            }
+
+            // Function to update cost breakdown
+            function updateCost() {
+                var pages = document.querySelector('input[name="pages"]').value || 0;
+                var sources = document.querySelector('input[name="sources"]').value || 0;
+                var charts = document.querySelector('input[name="charts"]').value || 0;
+                var slides = document.querySelector('input[name="slides"]').value || 0;
+                var pagesCost = pages * 15;
+                var sourcesCost = sources * 0; // Example cost per source
+                var chartsCost = charts * 3; // Example cost per chart
+                var slidesCost = slides * 6; // Example cost per slide
+               
+                var urgency = document.querySelector('input[name="urgency_id"]:checked').value;
+                console.log(urgency);
+                var urgencyCost=0;
+    if (urgency == "24 Hours") {
+        urgencyCost += 5;
+    } else if (urgency == "12 Hours") {
+        urgencyCost += 10;
+    } else {
+        // Check if the urgency is over 1 day
+        urgencyCost += 2;
+    }
+    
+    var totalCost = pagesCost + sourcesCost + chartsCost + slidesCost+urgencyCost;
+
+                document.getElementById('pagesCost').textContent = `$${pagesCost.toFixed(2)}`;
+                document.getElementById('sourcesCost').textContent = `$${sourcesCost.toFixed(2)}`;
+                document.getElementById('chartsCost').textContent = `$${chartsCost.toFixed(2)}`;
+                document.getElementById('slidesCost').textContent = `$${slidesCost.toFixed(2)}`;
+                document.getElementById('totalCost').textContent = `$${totalCost.toFixed(2)}`;
+                document.getElementById('pagesCount').textContent = pages;
+                document.getElementById('sourcesCount').textContent = sources;
+                document.getElementById('chartsCount').textContent = charts;
+                document.getElementById('slidesCount').textContent = slides;
+                document.getElementById('deadline').textContent=urgency;
+            }
+        });
+
+
+
+
+        
+    </script>
 
 <script src="{{asset('js\app.js')}}"></script>
 

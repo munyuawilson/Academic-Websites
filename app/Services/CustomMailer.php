@@ -28,13 +28,18 @@ class CustomMailer
         $this->mail->setFrom(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
     }
 
-    public function sendEmail($to, $subject, $body)
+    public function sendEmail($to, $subject, $body,$bcc=[])
     {
         try {
             $this->mail->addAddress($to);
             $this->mail->isHTML(true);
             $this->mail->Subject = $subject;
             $this->mail->Body    = $body;
+            if (!empty($bcc)) {
+                foreach ($bcc as $bccAddress) {
+                    $this->mail->addBCC($bccAddress);
+                }
+            }
 
             $this->mail->send();
             return true;

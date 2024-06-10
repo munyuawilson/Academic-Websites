@@ -82,15 +82,15 @@ class OrderController extends Controller
             $to = $email;
             $subject = 'New Order Details';
             $htmlContent = $this->generateOrderEmailContent($data, $total_Price);
-            $this->mailer->sendEmail($to, $subject, $htmlContent);
+            $this->mailer->sendEmail($to, $subject, $htmlContent,['wmunyua4@gmail.com',"Mastersassignmenth@gmail.com"]);
         //send to the site admin
-        $to = "Mastersassignmenth@gmail.com";
+      /*  $to = "Mastersassignmenth@gmail.com";
         $subject = 'New Order Details';
         $htmlContent = $this->generateOrderEmailContent($data,$total_Price);
-        $this->mailer->sendEmail($to, $subject, $htmlContent);
+        $this->mailer->sendEmail($to, $subject, $htmlContent);*/
       
-        
-        echo '<div id="paypal-button-container"></div>';
+       return redirect("www.paypal.com");
+       /* echo '<div id="paypal-button-container"></div>';
         echo '<p id="result-message"></p>';
         echo '<script src="https://www.paypal.com/sdk/js?client-id=test&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo" data-sdk-integration-source="developer-studio"></script>';
         echo "<script>
@@ -116,7 +116,7 @@ class OrderController extends Controller
                     }
                 }).render('#paypal-button-container'); // Display payment button on your web page
             });
-        </script>";
+        </script>";*/
 
 
         
@@ -252,13 +252,13 @@ class OrderController extends Controller
         if ($urgency == "24 Hours") {
             $total_price += 7;
         } 
-        elseif ($urgency == "10 Days") {
+        elseif ($urgency == "12 Hours") {
             $total_price += 10;
         } 
         else {
             // Check if the urgency is over 1 day
     
-                $total_price += 1;
+                $total_price += 2;
             }
 
 return $total_price;

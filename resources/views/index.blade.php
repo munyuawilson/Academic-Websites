@@ -76,6 +76,9 @@ s0.parentNode.insertBefore(s1,s0);
                 <a class="nav-link text-black" href="#">Blog</a>
             </li>
             <li class="nav-item link">
+                  <a class="nav-link text-black" href="{{route('index')}}#faqs">Faqs</a>
+                </li>
+            <li class="nav-item link">
                 <a class="nav-link text-black" href="#about">About Us</a>
             </li>
             <li class="nav-item link">
@@ -422,8 +425,8 @@ text-center text-primary">What Students Say About Us</h2>
 
 
 <div class="container accordion w-100 mt-5" id="basicAccordion">
-  <h1 class="text-center text-primary">Faqs</h1>
-  <div class="accordion-item mt-4">
+  <h1 class="text-center text-primary" id="faqs">Faqs</h1>
+  <div class="accordion-item mt-4" >
     <h2 class="accordion-header" id="headingOne">
       <button data-mdb-button-init  data-mdb-collapse-init class="accordion-button collapsed" type="button"
         data-mdb-target="#basicAccordionCollapseOne" aria-expanded="false" aria-controls="collapseOne">
