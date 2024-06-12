@@ -22,3 +22,6 @@ Route::get('/', function () {
 Route::get('/order', function () {return view('/order');})->name("order");
 Route::post("/confirm-order", "App\Http\Controllers\OrderController@order")->name("confirm-order");
 Route::get("/checkout",function () {return view('/payment');})->name("checkout");
+Route::get("/faqs",function (){
+    return view("faqs");
+})->name("faqs");

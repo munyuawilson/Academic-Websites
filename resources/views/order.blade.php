@@ -85,7 +85,7 @@
 <nav class="navbar navbar-expand-md navbar-light mt-3 mb-5 pb-5 mx-5">
   
 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-8">
-        <a class="navbar-brand" href="#"><img src="{{ asset('/images/logo.png') }}" class="img-fluid" alt="logo"></a>
+        <a class="navbar-brand" href="/"><img src="{{ asset('/images/logo.png') }}" class="img-fluid" alt="logo"></a>
     </div>
             <button class="navbar-toggler " type="button"   data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -99,7 +99,7 @@
                   <a class="nav-link text-black" href="">Blog</a>
                 </li>
                 <li class="nav-item link">
-                  <a class="nav-link text-black" href="{{route('index')}}#faqs">Faqs</a>
+                  <a class="nav-link text-black" href="/faqs">Faqs</a>
                 </li>
                 <li class="nav-item link">
                   <a class="nav-link text-black" href="{{route('index')}}#about">About Us</a>
@@ -682,17 +682,19 @@
         </div>
 
         <!--Start of Tawk.to Script-->
+<!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/665c9fc4981b6c5647777b17/1hvct06b2';
+s1.src='https://embed.tawk.to/66675e7a9a809f19fb3c2d85/1i01si4ma';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+<!--End of Tawk.to Script-->
   
     
 <!--End of Tawk.to Script-->

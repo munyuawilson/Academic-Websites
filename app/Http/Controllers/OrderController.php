@@ -115,7 +115,7 @@ if ($writerCategoryId ==null) {
         //send to the site admin
       /*  $to = "Mastersassignmenth@gmail.com";
         $subject = 'New Order Details';
-        $htmlContent = $this->generateOrderEmailContent($data,$total_Price);
+        $htmlContent = $this->generateOrderEmailContent($data,$total_Price);i
         $this->mailer->sendEmail($to, $subject, $htmlContent);*/
       return view("payment",['total_Price' => $total_Price]);
        

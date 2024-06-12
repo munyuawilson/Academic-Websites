@@ -64,7 +64,7 @@ s0.parentNode.insertBefore(s1,s0);
 
 
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-8">
-        <a class="navbar-brand" href="#"><img src="{{ asset('/images/logo.png') }}" class="img-fluid" alt="logo"></a>
+        <a class="navbar-brand" href="/"><img src="{{ asset('/images/logo.png') }}" class="img-fluid" alt="logo"></a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -78,10 +78,10 @@ s0.parentNode.insertBefore(s1,s0);
                 <a class="nav-link text-black" href="#">Blog</a>
             </li>
             <li class="nav-item link">
-                  <a class="nav-link text-black" href="{{route('index')}}#faqs">Faqs</a>
+                  <a class="nav-link text-black" href="/faqs">Faqs</a>
                 </li>
             <li class="nav-item link">
-                <a class="nav-link text-black" href="#about">About Us</a>
+                <a class="nav-link text-black" href="{{route('index')}}#about">About Us</a>
             </li>
             <li class="nav-item link">
                 <a class="nav-link nav-bg text-white rounded" href="{{ route('order') }}">Order Now</a>
