@@ -10,6 +10,7 @@ use App\Models\Order;
 
 
 
+
 class OrderController extends Controller
 {
     protected $mailer;
@@ -49,6 +50,10 @@ if ($writerCategoryId ==null) {
     $writerCategoryId = "Standard writer";
 
 }
+if ($spacing==null) {  
+    $spacing= "double";
+
+}
 
 
 //save 
@@ -77,8 +82,8 @@ if ($writerCategoryId ==null) {
             
         ];
 //calculate the price
-
-        $total_Price=$this->totalPrice($pages,$charts,$slides,$urgencyId);
+$total_Price=0;
+        $total_Price=$this->totalPrice($pages,$charts,$slides,$urgencyId,$spacing);
         
 
         $order = Order::create([
@@ -107,6 +112,8 @@ if ($writerCategoryId ==null) {
 
 
         $orderId = $order->id;
+
+        
         //send to the student
             $to = $email;
             $subject = 'New Order Details';
@@ -117,7 +124,7 @@ if ($writerCategoryId ==null) {
         $subject = 'New Order Details';
         $htmlContent = $this->generateOrderEmailContent($data,$total_Price);i
         $this->mailer->sendEmail($to, $subject, $htmlContent);*/
-      return view("payment",['total_Price' => $total_Price]);
+      return view("payment",compact('total_Price'));
        
        /* echo '<div id="paypal-button-container"></div>';
         echo '<p id="result-message"></p>';
@@ -267,12 +274,29 @@ if ($writerCategoryId ==null) {
         return $htmlContent;
     }
    
-    private function totalPrice($page,$charts,$slide,$urgency){
+    private function totalPrice($page,$charts,$slide,$urgency,$spacing){
         $total_price=0;
         
         if ($page>0){
         $total_price=$page * 15;
 
+        }
+        if ($spacing){
+            if ($spacing=='double'){
+                $total_price+=0;
+            }
+            else if($spacing=='single'){
+
+                $cost_pages=$page *15;
+                $cost_single_spacing=$cost_pages*2;
+                $total_price+= $cost_single_spacing;
+            }
+            else{
+                $total_price+= 0;
+            }
+        }
+        else{
+            $total_price+= 0;
         }
 
         if ($charts>0){

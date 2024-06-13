@@ -104,31 +104,54 @@ s0.parentNode.insertBefore(s1,s0);
     
 
 
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=AUN6vwKZ5Vn8Qf-Y4fvnCE1TbQHEstLOJx1CWUR-Ow7EHltJLLRAdsrYWR8D47tMcnY4jXFcswZigQIi" data-sdk-integration-source="developer-studio" ></script>
 
-        <script src="https://www.paypal.com/sdk/js?client-id=test&buyer-country=US&currency=USD&components=buttons&enable-funding=venmo" data-sdk-integration-source="developer-studio"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                paypal.Buttons({
-                    createOrder: function(data, actions) {
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: {
-                                    value: $total_price ,
-                                    payee: {
-                            email_address: 'Topessaytutors@gmail.com' 
-                        }
-                                }
-                            }]
-                        });
-                    },
-                    onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
-                            alert('Transaction completed by ' + details.payer.name.given_name);
-                            document.getElementById('result-message').innerText = 'Transaction completed by ' + details.payer.name.given_name;
-                        });
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const total_Price = {!! $total_Price !!};
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            const amount = total_Price;
+            const currency ="USD" ;
+
+            if (!amount || isNaN(amount) || amount <= 0) {
+                alert('Please enter a valid amount.');
+                return;
+            }
+
+            if (!currency || currency.length !== 3) {
+                alert('Please enter a valid currency code.');
+                return;
+            }
+
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: amount,
+                        currency_code: currency
                     }
-                }).render('#paypal-button-container'); // Display payment button on your web page
-            })
+                }]
+            }).catch(function(err) {
+                console.error('Error creating order:', err);
+                alert('An error occurred while creating the order.');
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name);
+            }).catch(function(err) {
+                console.error('Error capturing order:', err);
+                alert('An error occurred while capturing the order.');
+            });
+        },
+        onError: function(err) {
+            console.error('PayPal Button Error:', err);
+            alert('An error occurred with the PayPal button.');
+        }
+    }).render('#paypal-button-container');
+});
+
         </script>
 
 

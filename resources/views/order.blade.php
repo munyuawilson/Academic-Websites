@@ -649,6 +649,10 @@
                             <th id="slidesCost">$0.00</th>
                         </tr>
                         <tr>
+                            <td><span id="spacing"></span> Spacing</td>
+                            <th id="spacingcost">$0.00</th>
+                        </tr>
+                        <tr>
                     <td>Deadline:</td>
                     <th id="deadline">Not Specified</th>
                 </tr>
@@ -695,8 +699,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-  
-    
+
 <!--End of Tawk.to Script-->
 
 
@@ -743,6 +746,8 @@ s0.parentNode.insertBefore(s1,s0);
             var decrementButtons = document.getElementsByClassName('decrementBtn');
             var incrementButtons = document.getElementsByClassName('incrementBtn');
             var inputs = document.getElementsByClassName('pageInput');
+            var urgencyInputs = document.querySelectorAll('input[name="urgency_id"]');
+            var spacingInput = document.querySelector('input[name="spacing"]');
 
             // Function to decrement the input value
             function decrementInput(event) {
@@ -774,10 +779,18 @@ s0.parentNode.insertBefore(s1,s0);
                     updateCost(); // Update cost calculation
                 });
             }
+            for (var i = 0; i < urgencyInputs.length; i++) {
+        urgencyInputs[i].addEventListener('change', updateCost);
+    }
+
+    // Add change event listener to spacing input
+    if (spacingInput) {
+        spacingInput.addEventListener('change', updateCost);
+    }
 
             // Function to update cost breakdown
             function updateCost() {
-                var pages = document.querySelector('input[name="pages"]').value || 0;
+                var pages =parseFloat( document.querySelector('input[name="pages"]').value || 0);
                 var sources = document.querySelector('input[name="sources"]').value || 0;
                 var charts = document.querySelector('input[name="charts"]').value || 0;
                 var slides = document.querySelector('input[name="slides"]').value || 0;
@@ -787,7 +800,7 @@ s0.parentNode.insertBefore(s1,s0);
                 var slidesCost = slides * 6; // Example cost per slide
                
                 var urgency = document.querySelector('input[name="urgency_id"]:checked').value;
-                console.log(urgency);
+                var spacing = document.querySelector('input[name="spacing"]:checked').value;
                 var urgencyCost=0;
     if (urgency == "24 Hours") {
         urgencyCost += 5;
@@ -797,8 +810,27 @@ s0.parentNode.insertBefore(s1,s0);
         // Check if the urgency is over 1 day
         urgencyCost += 2;
     }
+
+    var spacingcost=0;
+    console.log(spacing);
+    if (spacing){
+            if (spacing=="double"){
+                spacingcost+=0;
+            }
+            else if(spacing=="single"){
+                
+                spacingcost += pagesCost;
+            }
+            else{
+                spacingcost+= 0;
+            }
+        }
+        else{
+            spacingcost+= 0;
+        }
+        console.log(spacingcost);
     
-    var totalCost = pagesCost + sourcesCost + chartsCost + slidesCost+urgencyCost;
+    var totalCost = pagesCost + sourcesCost + chartsCost + slidesCost+urgencyCost+spacingcost;
 
                 document.getElementById('pagesCost').textContent = `$${pagesCost.toFixed(2)}`;
                 document.getElementById('sourcesCost').textContent = `$${sourcesCost.toFixed(2)}`;
@@ -810,6 +842,8 @@ s0.parentNode.insertBefore(s1,s0);
                 document.getElementById('chartsCount').textContent = charts;
                 document.getElementById('slidesCount').textContent = slides;
                 document.getElementById('deadline').textContent=urgency;
+                document.getElementById('spacingcost').textContent=`$${spacingcost.toFixed(2)}`;
+                document.getElementById('spacing').textContent=spacing;
             }
         });
 
