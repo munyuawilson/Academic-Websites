@@ -1,0 +1,30 @@
+.nav-bg{
+
+    background-color: #ed6e33;
+}
+
+
+.bg-image{
+    background-image: url("../images/laptop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 450px;
+
+}
+
+.text-banner{
+
+    margin-top: 100px;
+}
+
+.orderlink{
+
+    text-decoration: none;
+}
+
+
+
+.links{
+    list-style: none;
+}
