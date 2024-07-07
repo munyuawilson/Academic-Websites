@@ -1,12 +1,12 @@
 @include('layouts.includes.head')
-<body>
+
 @include('layouts.includes.nav')
 
 <div class="container-fluid  bg-image">
 
 <div class="row ">
     <div class="col text-center text-banner">
-<h4 class="text-primary">FlawlessResearchers</h4>
+<h4 class="text-primary">Undergraduate Assignment Help</h4>
 
 <p class="text-primary">Are you having trouble with the grades? Hire our best tutors online</p>
 
@@ -17,33 +17,7 @@
     
     <div class="col">
 
-    <div class="text-center bg-white rounded pt-4 pb-5 px-3 shadow-sm form mt-3">
-        <h4 class="mb-4">Calculate the Price</h4>
-        <form action="" class="form">
-            <div class="form-group ">
-                <label for="academic_level">Academic Level</label>
-                <select name="academic_level" id="academic_level" class="form-control">
-                    <option value="Undergraduate">Undergraduate</option>
-                    <option value="High School">High School</option>
-                </select>
-            </div>
-            <div class="form-group ">
-                <label for="type_of_paper">Type Of Paper</label>
-                <input type="text" id="type_of_paper" name="type_of_paper" class="form-control">
-            </div>
-            <div class="form-group ">
-                <label for="urgency">Urgency</label>
-                <input type="text" id="urgency" name="urgency" class="form-control">
-            </div>
-            <div class="form-group pb-2">
-                <label for="pages">Pages</label>
-                <input type="text" id="pages" name="pages" class="form-control">
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary px-5">
-            </div>
-        </form>
-    </div>
+    @include('layouts.includes.cost-calculator')
 
 </div>
 
@@ -98,26 +72,27 @@
 
 
 
-<div class="container-fluid mt-4" style="background-color:#344754;">
+<div class="container-fluid mt-4 pt-4 pb-4" style="background-color:#344754;">
     <h2 class="text-center">What our customers say</h2>
     <p class="text-center text-white">____________</p>
-
+@include('layouts.includes.slideshow')
 </div>
 
 
-<div class="container-fluid mt-5 bg-success pb-4">
+<div class="container-fluid mt-5 bg-features pb-4">
     <h2 class="text-center pt-5">Our exclusive features</h2>
     <p class="text-center text-white">____________</p>
     <div class="row ">
-        <div class="col text-center">
+ <div class="col text-center mx-2 col-features">
 
 <ul class="links">
-    <li class="px-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">         SUPPORT TEAM AVAILABLE 24/7</li>
+    <li ><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">         SUPPORT TEAM AVAILABLE 24/7</li>
     <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_feather.png" alt="">         PERFECT PAPERS</li>
     <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_24h.png" alt="">         LOYALTY PROGRAM</li>
 </ul>
 </div>
-        <div class="col text-start"><ul class="links">
+        <div class="col text-start">
+            <ul class="links">
             <li><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_desktop.png" alt="">          TOLL-FREE NUMBER</li>
             <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">           MONEY BACK GUARANTEE</li>
             <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_24h.png" alt="">         100% CONFIDENTIALITY</li>
@@ -151,34 +126,38 @@
 <!--Why choose us--->
 
 
-<div class="container-fluid mt-5 bg-success pt-3">
+<div class="container-fluid mt-5 bg-features pt-3">
 
 
 <div class="container bg-white mt-3 pt-5">
     <h2 class="text-center">Why Custom Paper Writing Service?</h2>
 <p class="text-center">_______</p>
-<div class="row">
-    <div class="col">
-        <h4>Anonymous Online Essay Help</h4>
-        <img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">
+<div class="row mx-3 mt-2">
+    <div class="col text-center">
+        <h4 class="pb-3 text-center">Anonymous Online Essay Help</h4>
+        <img class='pb-3' src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">
         <p>We guarantee high quality to our customers. Our writing services are competitively priced, offering the absolute best quality for the cheap price.</p>
     </div>
-    <div class="col">
-        <h4>Fast and Simple Process</h4>
-        <img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_desktop.png" alt="">
+    <div class="col text-center">
+        <h4 class="pb-3 text-center">Fast and Simple Process</h4>
+        <img class='pb-3'src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_desktop.png" alt="">
         <p>Our three-step simple process is the fastest and easiest way to get your paper. Remember, there are no upfront fees.</p>
     </div>
 </div>
 
 
-<div class="row">
-    <div class="col"><h4>Absolute Privacy</h4></div>
+<div class="row mx-3">
+    <div class="col text-center"><h4 class="pb-3 text-center">Absolute Privacy</h4>
+    <img class='text-center'src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_feather.png" alt="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-   <p>Be sure that your contact information will be absolute private.</p>
-    <div class="col"></div>
-<h4>Only Trusted Tutors</h4>
-<img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_book_pencil.png" alt=""  width="58" height="60">
+    <p>Be sure that your contact information will be absolute private.</p></div>
+    
+    <div class="col text-center">
+    <h4 class="pb-3 text-center">Only Trusted Tutors</h4>
+<img class='text-center pb-2'src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_book_pencil.png" alt=""  width="58" height="60">
     <p>We have a team of professional authors. Our authors help in papers for many subjects: english, business, nursing, management, history, psychology, sociology, education, criminal law, marketing and other.</p>
+
+    </div>
 </div>
 </div>
 </div>

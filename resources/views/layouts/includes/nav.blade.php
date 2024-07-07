@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light nav-background nav-bg text-white">
     <div class=" container-fluid justify-content-center ">
-        <p class="text-center text-black ">Order a paper today and Get a 15% Discount</p>
+        <p class="text-center text-white ">Order a paper today and Get a 15% Discount</p>
     </div>
     </nav>
 
@@ -14,19 +14,19 @@
     <div class="collapse navbar-collapse justify-content-end text-center" id="navbarSupportedContent">
         <ul class="navbar-nav mx-3">
             <li class="nav-item link">
-                <a class="nav-link text-black" href="#contact">HOME</a>
+                <a class="nav-link text-black" href="/">HOME</a>
             </li>
             <li class="nav-item link">
                 <a class="nav-link text-black" href="{{route('hiw')}}">HOW IT WORKS</a>
             </li>
             <li class="nav-item link">
-                  <a class="nav-link text-black" href="/faqs">SAMPLES</a>
+                  <a class="nav-link text-black" href="/samples">SAMPLES</a>
                 </li>
             <li class="nav-item link">
                 <a class="nav-link text-black" href="#about">TOP WRITERS</a>
             </li>
             <li class="nav-item link">
-                <a class="nav-link text-black" href="#about">LOGIN/SIGNUP</a>
+                <a class="nav-link text-black" href="/sign-up">LOGIN/SIGNUP</a>
             </li>
             <li class="nav-item link">
                 <a class="nav-link nav-bg text-white rounded" href="">Order Now</a>
