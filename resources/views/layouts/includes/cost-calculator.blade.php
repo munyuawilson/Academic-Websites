@@ -1,11 +1,11 @@
-<div class="text-center bg-white rounded pt-4 pb-5 px-3 shadow-sm form mt-3">
+<div class="text-center bg-white rounded pt-4 pb-2 px-3 shadow-sm form mt-3">
         <h4 class="mb-4">Calculate the Price</h4>
         <form action="" class="form">
             <div class="form-group ">
                 <label for="academic_level">Academic Level</label>
                 <select name="academic_level" id="academic_level" class="form-control">
                     <option value="Undergraduate">Undergraduate</option>
-                    <option value="High School">High School</option>
+                    <option value="Highschool">High School</option>
                 </select>
             </div>
             <div class="form-group ">
@@ -60,29 +60,29 @@
             <div class="form-group ">
                 <label for="urgency">Urgency</label>
                 <select name="order_deadline" class="form-control custom-select border-default col-sm-7" id="urgency">
-                 <option value="20">  3 Hours  </option>
-         <option value="7">  7 Days  </option>
-         <option value="8">  6 Days  </option>
-         <option value="9">  5 Days  </option>
-         <option value="10">  3 Days  </option>
-         <option value="12">  48 Hours  </option>
-         <option value="15">  24 Hours  </option>
-         <option value="18">  8 Hours  </option>
-         <option value="20">  3 Hours  </option>
-         <option value="7">  7 Days  </option>
-         <option value="8">  6 Days  </option>
-         <option value="9">  5 Days  </option>
-         <option value="10">  3 Days  </option>
-         <option value="12">  48 Hours  </option>
-         <option value="15">  24 Hours  </option>
-         <option value="18">  8 Hours  </option>
+                <option value="3">3 Hours</option>
+<option value="168">7 Days </option>
+<option value="144">6 Days </option>
+<option value="120">5 Days </option>
+<option value="72">3 Days </option>
+<option value="48">48 Hours</option>
+<option value="24">24 Hours</option>
+<option value="8">8 Hours</option>
+<option value="3">3 Hours</option>
+<option value="168">7 Days </option>
+<option value="144">6 Days </option>
+<option value="120">5 Days </option>
+<option value="72">3 Days </option>
+<option value="48">48 Hours</option>
+<option value="24">24 Hours</option>
+<option value="8">8 Hours</option>
+
           </select>
             </div>
             <div class="form-group pb-2">
                 <label for="pages">Pages</label>
                 <select id="pages" name="order_pages" class="form-control col-sm-7 custom-select border-default" required="">
-<option value="0
-"> Select words/Pages </option>
+<option value="0"> Select words/Pages </option>
 <option value="1"> 1 Pages  </option>
 <option value="2"> 2 Pages  </option>
 <option value="3"> 3 Pages  </option>
@@ -118,5 +118,75 @@
             <div class="form-group">
                 <input type="submit" class="btn btn-primary px-5">
             </div>
+            <div class="form-group">
+        <label>Total Price:</label>
+        <p id="price" class="fw-bold">$0.00</p>
+      </div>
         </form>
     </div>
+    <script>
+    // Define pricing factors (can be adjusted as needed)
+    const pricingFactors = {
+      undergraduate: {
+        basePricePerPage: 15, // Example: $15 per page for undergraduate level
+        urgencyMultipliers: {
+          '3': 1.5,   // Example: 50% increase for very urgent (3 hours)
+          '8': 1.3,   // Example: 30% increase for urgent (8 hours)
+          '24': 1.2,  // Example: 20% increase for somewhat urgent (24 hours)
+          '48': 1     // Default multiplier for other urgencies
+        }
+      },
+      highschool: {
+        basePricePerPage: 10, // Example: $10 per page for high school level
+        urgencyMultipliers: {
+          '3': 1.6,   // Example: 60% increase for very urgent (3 hours)
+          '8': 1.4,   // Example: 40% increase for urgent (8 hours)
+          '24': 1.3,  // Example: 30% increase for somewhat urgent (24 hours)
+          '48': 1.1   // Example: 10% increase for other urgencies
+        }
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get DOM elements
+      const academicLevelSelect = document.getElementById('academic_level');
+      const typeOfPaperSelect = document.getElementById('type_of_paper');
+      const urgencySelect = document.getElementById('urgency');
+      const pagesSelect = document.getElementById('pages');
+      const priceDisplay = document.getElementById('price');
+
+      // Function to update price
+      function updatePrice() {
+        const academicLevel = academicLevelSelect.value.toLowerCase();
+        const typeOfPaper = typeOfPaperSelect.value.toLowerCase();
+        const urgencyValue = parseInt(urgencySelect.value); // Convert urgency to integer
+        const pages = parseInt(pagesSelect.value);
+        
+        // Determine pricing factors based on academic level
+        const pricingConfig = pricingFactors[academicLevel];
+        const basePricePerPage = pricingConfig.basePricePerPage;
+        const urgencyMultipliers = pricingConfig.urgencyMultipliers;
+        console.log(pricingConfig )
+        // Calculate base price
+        let basePrice = pages * basePricePerPage;
+
+        // Determine urgency multiplier based on selected urgency
+        let urgencyMultiplier = urgencyMultipliers[urgencyValue.toString()] || 1; // Default to 1 if multiplier not defined
+
+        // Adjust base price based on urgency multiplier
+        basePrice *= urgencyMultiplier;
+        console.log(basePrice)
+        // Display the calculated price
+        priceDisplay.innerText = `$${basePrice.toFixed(2)}`;
+      }
+
+      // Add event listeners to update price on change
+      academicLevelSelect.addEventListener('change', updatePrice);
+      typeOfPaperSelect.addEventListener('change', updatePrice);
+      urgencySelect.addEventListener('change', updatePrice);
+      pagesSelect.addEventListener('change', updatePrice);
+
+      // Initial price calculation
+      updatePrice();
+    });
+  </script>

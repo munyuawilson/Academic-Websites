@@ -223,123 +223,33 @@ a.article:hover {
 
         @include('layouts.includes.topnav')  
 
-            <div class="container mt-5">
-    <div class="card">
-        <div class="card-content">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/progress'">
-                        <div class="pb-1">
-                            <div class="clearfix mb-1">
-                                <i class="fas fa-tag font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 success float-right" id="dashboard-available-count">{{$orderCount}}</span>
-                            </div>
-                            <div>
-                                <h3 class="blue-grey">Available</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/progress'">
-                        <div class="pb-1">
-                            <div class="clearfix mb-1">
-                                <i class="fas fa-pencil-alt font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 info float-right" id="dashboard-inprogress-count">{{$orderCount}}</span>
-                            </div>
-                            <div>
-                                <h3 class="blue-grey">In Progress</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/review'">
-                        <div class="pb-1">
-                            <div class="clearfix mb-1">
-                                <i class="fas fa-flag font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 info float-right" id="dashboard-inreview-count">{{$orderCount}}</span>
-                            </div>
-                            <div>
-                                <h3 class="blue-grey">In Review</h3>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-                
-                
-            </div>
-
-        </div>
+        <div class="container mt-5">
+        <h2 class="text-center pb-5">Revision</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Topic</th>
+                    <th scope="col">Pages</th>
+                    <th scope="col">Budget ($)</th>
+                    <th scope="col">Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($orders as $order)
+            <tr>
+                <td>{{ $order->order_id }}</td>
+                <td>{{ $order->subject_id }}</td>
+                <td>{{ $order->topic }}</td>
+                <td>{{ $order->pages }}</td>
+                <td>{{ $order->budget }}</td>
+                <td>{{ $order->duration }}</td>
+            </tr>
+        @endforeach
+            </tbody>
+        </table>
     </div>
-
-
-
-
-    <div class="card mt-5">
-        <div class="card-content">
-            <div class="card-body">
-
-            <div class="row shadow">
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/paid'">
-                        <div class="pb-1">
-                            <div class="clearfix mb-1">
-                            <i class="fas fa-check-circle font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 success float-right" id="dashboard-available-count">{{$paidCount}}</span>
-                            </div>
-                            <div>
-                                <h3 class="blue-grey">Paid</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/orders/in-progress/'">
-                        <div class="pb-1">
-                            <div class="clearfix mb-1">
-                            <i class="fas fa-sync-alt font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 info float-right" id="dashboard-inprogress-count">{{$revisedCount}}</span>
-                            </div>
-                            <div>
-                                <h3 class="blue-grey">Revision</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/disputed'">
-                        <div class="pb-1">
-                            <div class="clearfix mb-1">
-                            <i class="fas fa-exclamation-triangle font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 info float-right" id="dashboard-inreview-count">0</span>
-                            </div>
-                            <div>
-                                <h3 class="blue-grey">Disputed</h3>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-        </div>
-        </div>
-    </div>
-    
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </div>
     </div>
 
    

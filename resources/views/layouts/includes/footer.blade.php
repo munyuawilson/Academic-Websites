@@ -1,29 +1,37 @@
 
-<div class="container-fluid bg-dark text-white mt-5 pt-3">
-    <div class="row mt-3 pt-3">
-        <div class="col px-3 "><ul class="links">
+<div class="container-fluid bg-dark text-white mt-5 pt-3 pb-3">
+    <div class="row mt-3 ">
+        <div class="col px-3 ">
+            <h4 class="">Contact Us</h4>
+            <ul class="links">
             <li>perfectpapers54@gmail.com
 
 </li>
             <li>+1 (914) 317-4571</li>
             <li>+1 (365) 657-5404</li>
-        </ul></div>
-        <div class="col text-start justify-content-start px-4">
-        <ul class="footer-list">
-    <li><a href="/" class="px-2">Home</a></li>
-    <li><a href="/services" class="px-2">Services</a></li>
-    <li><a href="/revision" class="px-2">Revision Policy</a></li>
-    <li><a href="#" class="px-2">Latest Reviews</a></li>
-    <li><a href="/how-it-works" class="px-2">How it Works</a></li>
-    <li><a href="#" class="px-2">Refund Policy</a></li>
+        </ul>
+    </div>
+        <div class="col px-4 mx-3">
+            <h4>About Us</h4>
+        <ul class="list-unstyled">
+    <li><a href="/" class="px-2 " style="text-decoration:none;color:white;">Home</a></li>
+    <li><a href="/services" class="px-2" style="text-decoration:none;color:white;">Services</a></li>
+    <li><a href="/revision" class="px-2" style="text-decoration:none;color:white;">Revision Policy</a></li>
+    <li><a href="#" class="px-2" style="text-decoration:none;color:white;">Latest Reviews</a></li>
+    <li><a href="/how-it-works" class="px-2" style="text-decoration:none;color:white;">How it Works</a></li>
+    <li><a href="#" class="px-2" style="text-decoration:none;color:white;">Refund Policy</a></li>
 </ul>
 
         </div>
     </div>
-    <div class="pb-1 mt-2">
+    <div class="container-fluid pb-1 mt-2">
         <p class="text-center">2011-2021 © topessaytutors.com All rights reserved</p>
     </div>
+    <div class="container text-center">
+        <p>Developed by: Turbo Knights Systems</p>
+    </div>
 </div>
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -63,5 +71,15 @@
         showSlides();
     }
 </script>
-
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/66675e7a9a809f19fb3c2d85/1i01si4ma';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
 </html>

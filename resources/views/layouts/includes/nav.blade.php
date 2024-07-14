@@ -29,7 +29,7 @@
                 <a class="nav-link text-black" href="/sign-up">LOGIN/SIGNUP</a>
             </li>
             <li class="nav-item link">
-                <a class="nav-link nav-bg text-white rounded" href="">Order Now</a>
+                <a class="nav-link nav-bg text-white rounded" href="/order">Order Now</a>
             </li>
         </ul>
     </div>

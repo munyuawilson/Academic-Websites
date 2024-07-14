@@ -216,19 +216,19 @@ a.article:hover {
 </head>
 <body>
     
-@include('layouts.includes.sidebar')
+@include('layouts.includes.sidebaradmin')
 
         <!-- Page Content  -->
         <div id="content">
 
-        @include('layouts.includes.topnav')  
+        @include('layouts.includes.topadminnav')  
 
             <div class="container mt-5">
     <div class="card">
         <div class="card-content">
             <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/progress'">
+                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/admin/progress'">
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                                 <i class="fas fa-tag font-large-1 blue-grey float-left mt-1"></i>
@@ -239,7 +239,7 @@ a.article:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/progress'">
+                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/admin/progress'">
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                                 <i class="fas fa-pencil-alt font-large-1 blue-grey float-left mt-1"></i>
@@ -250,7 +250,7 @@ a.article:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/review'">
+                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/admin/review'">
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                                 <i class="fas fa-flag font-large-1 blue-grey float-left mt-1"></i>
@@ -279,7 +279,7 @@ a.article:hover {
             <div class="card-body">
 
             <div class="row shadow">
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/paid'">
+                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/admin/paid'">
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                             <i class="fas fa-check-circle font-large-1 blue-grey float-left mt-1"></i>
@@ -290,7 +290,7 @@ a.article:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/orders/in-progress/'">
+                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/admin/revision/'">
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                             <i class="fas fa-sync-alt font-large-1 blue-grey float-left mt-1"></i>
@@ -301,7 +301,7 @@ a.article:hover {
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/Dashboard/disputed'">
+                    <div class="col-lg-4 col-sm-12 border-right-blue-grey border-right-lighten-5 clickable" onclick="window.location.href='/admin/disputed'">
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                             <i class="fas fa-exclamation-triangle font-large-1 blue-grey float-left mt-1"></i>

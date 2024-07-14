@@ -2,9 +2,9 @@
 
 @include('layouts.includes.nav')
 
-<div class="container-fluid  bg-image">
+<div class="container-fluid mb-5  bg-image">
 
-<div class="row ">
+<div class="row mb-5">
     <div class="col text-center text-banner">
 <h4 class="text-primary">Undergraduate Assignment Help</h4>
 
@@ -15,7 +15,7 @@
     </div>
     </div>
     
-    <div class="col">
+    <div class="col mx-3">
 
     @include('layouts.includes.cost-calculator')
 
@@ -26,8 +26,8 @@
 </div>
 
 
-<div class="container mt-5">
-    <div class="row">
+<div class="container mt-5 pt-5 my-5">
+    <div class="row mt-5">
 
         <div class="col">
             <h4><em>Our steps</em></h4>
@@ -83,19 +83,19 @@
     <h2 class="text-center pt-5">Our exclusive features</h2>
     <p class="text-center text-white">____________</p>
     <div class="row ">
- <div class="col text-center mx-2 col-features">
+ <div class="col text-center ">
 
 <ul class="links">
-    <li ><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">         SUPPORT TEAM AVAILABLE 24/7</li>
-    <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_feather.png" alt="">         PERFECT PAPERS</li>
-    <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_24h.png" alt="">         LOYALTY PROGRAM</li>
+    <li class="pt-3"> <img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">SUPPORT TEAM AVAILABLE 24/7</li>
+    <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_feather.png" alt="">PERFECT PAPERS</li>
+    <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_24h.png" alt="">LOYALTY PROGRAM</li>
 </ul>
 </div>
-        <div class="col text-start">
+        <div class="col text-center">
             <ul class="links">
-            <li><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_desktop.png" alt="">          TOLL-FREE NUMBER</li>
-            <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">           MONEY BACK GUARANTEE</li>
-            <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_24h.png" alt="">         100% CONFIDENTIALITY</li>
+            <li><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_desktop.png" alt="">TOLL-FREE NUMBER</li>
+            <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_clock.png" alt="">MONEY BACK GUARANTEE</li>
+            <li class="pt-3"><img src="https://flawlessresearchers.com/wp-content/uploads/2019/10/icon_24h.png" alt="">100% CONFIDENTIALITY</li>
         </ul>
             
 
