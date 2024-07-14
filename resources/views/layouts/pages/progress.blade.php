@@ -240,13 +240,14 @@ a.article:hover {
             </thead>
             <tbody>
             @foreach($orders as $order)
-            <td>
+            <tr>
                 <td>{{ $order->order_id }}</td>
                 <td>{{ $order->subject_id }}</td>
                 <td>{{ $order->topic }}</td>
                 <td>{{ $order->pages }}</td>
                 <td>{{ $order->budget }}</td>
                 <td>{{ $order->duration }}</td>
+                
                 <td><div id="paypal-button-container-{{ $order->order_id }}"></div>
                         <script>
                             paypal.Buttons({
@@ -268,8 +269,9 @@ a.article:hover {
                             }).render('#paypal-button-container-{{ $order->order_id }}');
                         </script>
                     </td>
-            </tr>
         @endforeach
+        
+                    </tr>
                 <!-- Add more rows as needed -->
             </tbody>
         </table>
