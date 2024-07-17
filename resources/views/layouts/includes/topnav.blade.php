@@ -19,11 +19,11 @@
                             <a href="#"> <i class="ficon far fa-comments " aria-hidden="true"></i></a>
                         </li>
                         
-                        <li class="px-3 dropdown">
+                        <li class="px-3 dropdown text-black">
   <a class=" btn  dropdown-toggle text-black" type="button" data-bs-toggle="dropdown" aria-expanded="false">
   <span class="text-black">{{ $user->name }}</span>
 </a>
-  <ul class="dropdown-menu">
+  <ul class="dropdown-menu ">
   <li><a class="dropdown-item" href=""><i class="fas fa-user-edit"></i> Edit Profile</a></li>
  
   <li> <form action="{{ route('logout') }}" method="POST">

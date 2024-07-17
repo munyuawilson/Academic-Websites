@@ -49,7 +49,7 @@ class logincontroller extends Controller
         $user->password = bcrypt($password); 
         $user->save();
 
-        redirect().route('log-in');
+        redirect()->route('log-in');
         
     }
     public function show_name(Request $request){

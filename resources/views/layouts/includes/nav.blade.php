@@ -23,7 +23,7 @@
                   <a class="nav-link text-black" href="/samples">SAMPLES</a>
                 </li>
             <li class="nav-item link">
-                <a class="nav-link text-black" href="#about">TOP WRITERS</a>
+                <a class="nav-link text-black" href="/blog">BLOG</a>
             </li>
             <li class="nav-item link">
                 <a class="nav-link text-black" href="/sign-up">LOGIN/SIGNUP</a>

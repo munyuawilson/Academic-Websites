@@ -1,3 +1,4 @@
+<div class="table-responsive">
 <table class="table table-striped table-bordered">
             <thead class="thead-dark">
                 <tr>
@@ -31,3 +32,4 @@
                 <!-- Add more rows as needed -->
             </tbody>
         </table>
+        </div>

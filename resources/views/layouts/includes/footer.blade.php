@@ -1,8 +1,8 @@
 
 <div class="container-fluid bg-dark text-white mt-5 pt-3 pb-3">
     <div class="row mt-3 ">
-        <div class="col px-3 ">
-            <h4 class="">Contact Us</h4>
+        <div class="col px-4 ">
+            <h4>Contact Us</h4>
             <ul class="links">
             <li>perfectpapers54@gmail.com
 

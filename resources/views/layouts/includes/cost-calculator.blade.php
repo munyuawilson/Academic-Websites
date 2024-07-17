@@ -1,5 +1,5 @@
-<div class="text-center bg-white rounded pt-4 pb-2 px-3 shadow-sm form mt-3">
-        <h4 class="mb-4">Calculate the Price</h4>
+<div class="col mx-5 mb-4 text-center bg-white rounded mt-5 pb-1 px-3 shadow-sm mt-2 ">
+        <h4 class="pt-5">Calculate the Price</h4>
         <form action="" class="form">
             <div class="form-group ">
                 <label for="academic_level">Academic Level</label>
@@ -114,9 +114,6 @@
 <option value="29"> 29 Pages  </option>
 <option value="30"> 30 Pages  </option>
 </select>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary px-5">
             </div>
             <div class="form-group">
         <label>Total Price:</label>

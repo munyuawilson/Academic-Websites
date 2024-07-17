@@ -1,55 +1,4 @@
-<head>
-    <style>
-        
 
-        .sidebar-header img {
-            max-width: 100%;
-        }
-
-        .wrapper {
-            display: flex;
-            flex-wrap: nowrap;
-        }
-
-        #sidebar {
-            min-width: 250px;
-            max-width: 250px;
-            color: #fff;
-            transition: all 0.3s;
-            position: -webkit-sticky; /* Safari */
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        #content {
-            width: 100%;
-            padding: 20px;
-        }
-
-        @media (max-width: 768px) {
-            #sidebar {
-                min-width: 100%;
-                max-width: 100%;
-                position: relative;
-                height: auto;
-            }
-            #sidebar.active {
-                margin-left: 0;
-            }
-        }
-
-        .link:hover {
-            color: black;
-            background: #fff;
-        }
-
-        .dropdown-toggle::after {
-            display: none;
-        }
-    </style>
-</head>
 <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar" class="nav-bg fixed">
@@ -100,4 +49,4 @@
             </ul>
 
             
-        </nav>
+    </nav>
