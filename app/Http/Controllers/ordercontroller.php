@@ -114,7 +114,7 @@ class ordercontroller extends Controller
                 $to = $email;
                 $subject = 'New Order Details';
                 $htmlContent = $this->generateOrderEmailContent($data, $total_Price,$orderId);
-                $this->mailer->sendEmail($to, $subject, $htmlContent,['wmunyua4@gmail.com',"undergraduateshighschoolassign@gmail.com"]);
+                $this->mailer->sendEmail($to, $subject, $htmlContent,['wmunyua4@gmail.com',"Mastersassignmenth@gmail.com"]);
             //send to the site admin
           
           return redirect()->route('log-in');
