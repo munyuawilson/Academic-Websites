@@ -4,11 +4,12 @@
         <div class="col px-4 ">
             <h4>Contact Us</h4>
             <ul class="links">
-            <li>perfectpapers54@gmail.com
+            <li>
+            undergraduateshighschoolassign@gmail.com
 
 </li>
             <li>+1 (914) 317-4571</li>
-            <li>+1 (365) 657-5404</li>
+            
         </ul>
     </div>
         <div class="col px-4 mx-3">
