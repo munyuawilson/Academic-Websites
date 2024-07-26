@@ -1,67 +1,43 @@
 @include('layouts.includes.head')
 @include('layouts.includes.nav')
 
+<div class="container">
+    <header class="blog-header text-center">
+        <h1 class="blog-title">Samples</h1>
+        <p class="lead">Welcome to the samples page where we share insights and research.</p>
+    </header>
 
-<div class="container-fluid mb-5 bg-success">
-    <div class="container mt-5 pt-4 pb-5 bg-light mx-3">
-        <h6 class="fw-bold">SAMPLE</h6>
-        <div class="row ">
-            <div class="col">
-        <div class="row mt-3 px-4">
-            <div class="col"><ul class="list-unstyled">
-        <li class="fw-bold">Expository Essay</li>
-        <li>Paper title: Online Education</li>
-        <li>Academic level: College</li>
-        <li>Discipline: English 101</li>
-        <li>Paper Format: MLA</li>
-        <li>Sources: 2</li>
-    </ul></div>
-            <div class="col">
-            <ul class="list-unstyled">
-        <li class="fw-bold">Analysis Essay</li>
-        <li>Paper title: Advantages and Disadvantages of Lowering the Voting Age to Thirteen</li>
-        <li>Academic level: College</li>
-        <li>Discipline: Political sciences</li>
-        <li>Paper Format: APA</li>
-        <li>Sources: 1</li>
-    </ul>
-            </div>
-            
-        </div>
-        <div class="row px-4">
-            <div class="col">
-            <ul class="list-unstyled">
-        <li class="fw-bold">Argumentative Essay</li>
-        <li>Paper title: Keeping Animals in Zoos Is not Justifiable</li>
-        <li>Academic level: College</li>
-        <li>Discipline: Ethics</li>
-        <li>Paper Format: APA</li>
-        <li>Sources: 5</li>
-    </ul></div>
-            <div class="col">
-            <ul class="list-unstyled">
-        <li class="fw-bold">Critical Essay</li>
-        <li>Paper title: Having Cell Phones in Elementary School</li>
-        <li>Academic level: College</li>
-        <li>Discipline: Education</li>
-        <li>Paper Format: MLA</li>
-        <li>Sources: 3</li>
+    <main role="main" class="pb-3">
+        <div class="row pt-5">
+            <div class="col-md-8">
+                @foreach ($samples as $sample)
+                    <div class="blog-post mb-4">
+                        <h2 class="blog-post-title">{{ $sample->title }}</h2>
+                        <p class="blog-post-meta">{{ $sample->created_at->format('F j, Y') }} by <a href="#">Author</a></p>
+                        <p>{{ $sample->content }}</p>
+                       
+                    </div>
+                @endforeach
 
-    </ul>
-   
+                <!-- Pagination -->
+                {{ $samples->links('pagination::bootstrap-5') }}
             </div>
-            
+
+            <aside class="col-md-4">
+                <div class="sidebar">
+                    <h4>About Me</h4>
+                    <p>Best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom.</p>
+                    <h4>Recent Posts</h4>
+                    <ul class="list-unstyled">
+                        @foreach ($samples as $sample)
+                            <li><a href="#">{{ $sample->title }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </aside>
         </div>
-        </div>
-        @include('layouts.includes.row-custom')
-        </div>
-       
-      
-        
-        
-       
-    </div>
-    
+    </main>
+
 </div>
 
 @include('layouts.includes.slideshow')

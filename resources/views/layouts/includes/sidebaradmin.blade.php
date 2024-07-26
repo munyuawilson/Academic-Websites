@@ -35,6 +35,10 @@
                     </i> Blog</a>
                 </li>
                 <li>
+                <a href="/admin/samples"><i class="fas fa-blog"></i>
+                    </i> Samples</a>
+                </li>
+                <li>
                     <a href="/"><i class="fas fa-address-book"></i> Contact</a>
                 </li>
 

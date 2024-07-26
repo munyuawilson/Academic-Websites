@@ -229,7 +229,7 @@ a.article:hover {
         @include('layouts.includes.topadminnav')   
 
         <div class="container mt-5">
-        <h2 class="text-center pb-5">Blog</h2>
+        <h2 class="text-center pb-5">Samples</h2>
         
     </div>
     <!-- Place the first <script> tag in your HTML's <head> -->
@@ -249,7 +249,7 @@ a.article:hover {
     ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
   });
 </script>
-<form action="/admin/addblog" method="post">
+<form action="/admin/samples" method="post">
     @csrf
     <div class="form-group mb-4">
     <label for="title" class="fw-bold">Title:</label>
@@ -257,7 +257,7 @@ a.article:hover {
     <!-- Add a placeholder for better user guidance -->
 </div>
 <textarea name="blog">
-  Welcome to Blog!
+  Welcome to Samples page
 </textarea>
 <div class="form-group text-center mt-5">
 <input type="submit" value="submit" class="btn btn-primary">

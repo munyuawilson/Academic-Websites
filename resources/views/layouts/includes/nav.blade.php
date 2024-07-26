@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light nav-background nav-bg text-white">
+<nav class="navbar navbar-expand-md navbar-light nav-background bg-dark text-white">
     <div class=" container-fluid justify-content-center ">
         <p class="text-center text-white ">Order a paper today and Get a 15% Discount</p>
     </div>

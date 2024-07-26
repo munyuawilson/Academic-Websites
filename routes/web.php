@@ -9,9 +9,7 @@ Route::get('/', function () {
 Route::get('/how-it-works',function(){
     return view('layouts.pages.hiw');
 })->name('hiw');
-Route::get('/samples',function(){
-    return view('layouts.pages.samples');
-})->name('samples');
+Route::get('/samples','App\Http\Controllers\blogcontroller@Sample');
 Route::get('/services',function(){
     return view('layouts.pages.services');
 })->name('services');
@@ -21,9 +19,9 @@ Route::get('/revision',function(){
 Route::get('/sign-up',function(){
     return view('layouts.pages.sign-up');
 })->name('sign-up');
-Route::get('/log-in',function(){
+Route::get('/login',function(){
     return view('layouts.pages.log-in');
-})->name('log-in');
+})->name('login');
 Route::get('/Dashboard',"App\Http\Controllers\logincontroller@show_name"
 )->name('Dashboard')->middleware('auth');
 
@@ -31,7 +29,7 @@ Route::get('/order',function(){
     return view('layouts.pages.order');
 })->name('order');
 Route::post('/submit-order',"App\Http\Controllers\ordercontroller@order")->name('submit-order');
-Route::post('/log-in',"App\Http\Controllers\logincontroller@login");
+Route::post('/login',"App\Http\Controllers\logincontroller@login");
 Route::post('/sign-up',"App\Http\Controllers\logincontroller@signup");
 
 
@@ -49,17 +47,22 @@ Route::get('/logout', 'App\Http\Controllers\logincontroller@logout')->name('logo
 
 //admin
 Route::get('/admin',"App\Http\Controllers\admincontroller@show_name"
-)->name('admin');
+)->name('admin')->middleware('auth');
 
-Route::get('/admin/completed',"App\Http\Controllers\admincontroller@completed")->name('completed');
+Route::get('/admin/completed',"App\Http\Controllers\admincontroller@completed")->name('completed')->middleware('auth');
 
-Route::get('/admin/revision',"App\Http\Controllers\admincontroller@revision")->name('dashboard-revision');
+Route::get('/admin/revision',"App\Http\Controllers\admincontroller@revision")->name('dashboard-revision')->middleware('auth');
 
-Route::get('/admin/disputed',"App\Http\Controllers\admincontroller@disputed")->name('disputed');
-Route::get('/admin/paid',"App\Http\Controllers\admincontroller@paid")->name('paid');
-Route::get('/admin/progress',"App\Http\Controllers\admincontroller@InProgress")->name('progress');
+Route::get('/admin/disputed',"App\Http\Controllers\admincontroller@disputed")->name('disputed')->middleware('auth');
+Route::get('/admin/paid',"App\Http\Controllers\admincontroller@paid")->name('paid')->middleware('auth');
+Route::get('/admin/progress',"App\Http\Controllers\admincontroller@InProgress")->name('progress')->middleware('auth');
 Route::get('/admin/addblog',function(){
     return view('layouts.pages.admin.addblog');
-})->name('writeblog');
-Route::post('/admin/addblog',"App\Http\Controllers\blogcontroller@writeblog")->name('writeblog');
+})->name('writeblog')->middleware('auth');
+Route::post('/admin/addblog',"App\Http\Controllers\blogcontroller@writeblog")->name('writeblog')->middleware('auth');
 Route::get('/blog',"App\Http\Controllers\blogcontroller@blog")->name('blog');
+Route::post('/admin/samples',"App\Http\Controllers\blogcontroller@writeSamples")->name('samples');
+
+Route::get('/admin/samples',function(){
+    return view('layouts.pages.admin.samples')->middleware('auth');
+});

@@ -25,11 +25,9 @@
         </div>
     </div>
     <div class="container-fluid pb-1 mt-2">
-        <p class="text-center">2011-2021 © topessaytutors.com All rights reserved</p>
+        <p class="text-center">2011-2024 © topessaytutors.com All rights reserved. Developed by: Turbo Knights Systems</p>
     </div>
-    <div class="container text-center">
-        <p>Developed by: Turbo Knights Systems</p>
-    </div>
+  
 </div>
 
 

@@ -24,7 +24,7 @@
 <input type="submit" class="btn btn-primary " value="Sign-Up"> 
     
 </div>
-<p class="pt-2">Already have an account?<a href="/log-in" class=""> Log in</a> </p>
+<p class="pt-2">Already have an account?<a href="/login" class=""> Log in</a> </p>
 </div>
 </form>
 </div>

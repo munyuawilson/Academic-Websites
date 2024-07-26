@@ -12,7 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->string('spacing')->nullable()->nullable()->change();
+            if (Schema::hasColumn('orders', 'spacing')) {
+                $table->string('spacing')->nullable()->change();
+            } else {
+                $table->string('spacing')->nullable();
+            }
         });
     }
 
@@ -22,7 +26,10 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('orders', function (Blueprint $table) {
-            //
+            // Add logic to reverse the change if necessary
+            if (Schema::hasColumn('orders', 'spacing')) {
+                $table->string('spacing')->nullable(false)->change();
+            }
         });
     }
 };

@@ -22,15 +22,14 @@ class logincontroller extends Controller
         // Attempt to authenticate the user
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             $user = Auth::user();
+            if ($email==="undergraduateshighschoolassign@gmail.com"){
+                return redirect()->route('admin');}
            return redirect()->route('Dashboard');
         } 
-        else if ($email==="admin@gmail.com" &&$password==='admin'){
-            return redirect()->route('admin');
-
-        }
+       
         else {
             // Authentication failed, return an error message
-            return redirect()->route('log-in')->withErrors(['error' => 'Invalid credentials!']);
+            return redirect()->route('login')->withErrors(['error' => 'Invalid credentials!']);
         }
         
        
@@ -49,7 +48,7 @@ class logincontroller extends Controller
         $user->password = bcrypt($password); 
         $user->save();
 
-        redirect()->route('log-in');
+        redirect()->route('login');
         
     }
     public function show_name(Request $request){

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\BlogPost;
+use App\Models\Sample;
 class blogcontroller extends Controller
 {
  function blog(){
@@ -24,4 +25,26 @@ function writeblog(Request $request){
    return view('layouts.pages.admin.addblog');
 
 } 
+function writeSamples(Request $request){
+
+    $Content=$request->get('blog');
+
+    $title=$request->get('title');
+
+    $sample = Sample::create([
+        'title' => $title,
+        'content' =>  $Content,
+    ]);
+    
+
+
+   return view('layouts.pages.admin.samples');
+
+} 
+
+function Sample(){
+    $samples = Sample::latest()->paginate(10);
+    return view('layouts.pages.samples',compact('samples'));
+ }
+
 }

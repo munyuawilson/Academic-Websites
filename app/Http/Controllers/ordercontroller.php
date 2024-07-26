@@ -117,7 +117,7 @@ class ordercontroller extends Controller
                 $this->mailer->sendEmail($to, $subject, $htmlContent,['wmunyua4@gmail.com',"Mastersassignmenth@gmail.com"]);
             //send to the site admin
           
-          return redirect()->route('log-in');
+          return redirect()->route('login');
            
           
     
