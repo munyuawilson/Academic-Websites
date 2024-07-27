@@ -30,4 +30,4 @@ Route::get("/admin/login",function (){
     return view("pages.admin.log-in");
 })->name("login");
 
-Route::post("/admin/login","App\Http\Controllers\OrderController@order")->name("login");
+Route::post("/admin/login","App\Http\Controllers\LoginController@login")->name("login");
