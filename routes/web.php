@@ -25,3 +25,9 @@ Route::get("/checkout",function () {return view('/payment');})->name("checkout")
 Route::get("/faqs",function (){
     return view("faqs");
 })->name("faqs");
+
+Route::get("/admin/login",function (){
+    return view("pages.admin.log-in");
+})->name("login");
+
+Route::post("/admin/login","App\Http\Controllers\OrderController@order")->name("login");

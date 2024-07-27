@@ -69,12 +69,13 @@
     </style>
 </head>
 <body>
-    @include('includes.nav')
+@include('layouts.includes.head')
+@include('layouts.includes.nav')
 <div class="row">
 <div id="orderFormApp" class="container col mt-4">
     
     
-    <form id="main_new_order" method="post" action="/confirm-order" class="form-horizontal ajax-pssdost row">
+    <form id="main_new_order" method="post" action="/submit-order" class="form-horizontal ajax-pssdost row">
 
    
         
@@ -95,10 +96,12 @@
                             <div class="form-group row">
                                 <label class="col-md-2 control-label">Academic Level: </label>
                                 <div class="col-md-9">
-                                    <span v-for="academic_level in academic_levels">
-                                        <input class='' v-model="academic_id" type="radio" :id="" name="academic_level" value="Masters">
-                                        <label :for=""> Masters</label>
-                                    </span>
+                                
+                <select name="academic_level" id="academic_level" class="form-control">
+                    <option value="Undergraduate">Undergraduate</option>
+                    <option value="Highschool">High School</option>
+                </select>
+           
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -621,7 +624,7 @@
                             <th id="totalCost">$0.00</th>
                         </tr>
                         <tr>
-                            <td colspan="2" style="font-size: large;">DISCOUNT CODE<br> <code style="font-size: 25px;">10OFF</code></td>
+                            <td colspan="2" style="font-size: large;">DISCOUNT CODE<br> <code style="font-size: 25px;">15OFF</code></td>
                         </tr>
                         <tr>
                             <th colspan="2" align="right">

@@ -44,49 +44,7 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 
-<nav class="navbar navbar-expand-md navbar-light nav-background nav-bg text-white">
-    <div class=" container-fluid justify-content-center ">
-        <ul class="navbar-nav pt-2">
-            <li class="nav-item px-2
-            pt-2">+19143174571 
-</li>
-            
-            <li class="nav-item px-2 pt-2">Mastersassignmenth@gmail.com </li>
-            <li class="nav-item px-2 rounded bg-success pt-2 pb-2 "><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="text-white whatsapp-link" >Order On Whatsapp</a></li>
-        </ul>
-    </div>
-    </nav>
-
-    <nav class="navbar navbar-expand-md navbar-light nav-background mt-3 mb-5 pb-5 mx-5 px-4">
-
-
-
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-8">
-        <a class="navbar-brand" href="/"><img src="{{ asset('/images/logo.png') }}" class="img-fluid" alt="logo"></a>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end text-center" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-3">
-            <li class="nav-item link">
-                <a class="nav-link text-black" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item link">
-                <a class="nav-link text-black" href="#">Blog</a>
-            </li>
-            <li class="nav-item link">
-                  <a class="nav-link text-black" href="{{route('index')}}#faqs">Faqs</a>
-                </li>
-            <li class="nav-item link">
-                <a class="nav-link text-black" href="{{route('index')}}#about">About Us</a>
-            </li>
-            <li class="nav-item link">
-                <a class="nav-link nav-bg text-white rounded" href="{{ route('order') }}">Order Now</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+@include('includes.nav')
 
 
 <div class="container accordion w-100 mt-5" id="basicAccordion">
@@ -629,10 +587,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </div>
 </div>
-<div class="container mt-5">
-  <p class="text-center mt-5"><strong>@Copyright 2024</strong></p>
-</div>
-
+@include('includes.footer')
 
 
   </div>

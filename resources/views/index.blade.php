@@ -10,7 +10,7 @@
 <meta name="description" content="MasterAssignmentHelp.com provides online assignment help for students. Our team of experts can help you with essays, online classes, exams, projects, and more. Get high grades and reduce stress with our affordable services. Contact us on WhatsApp today!" />
 <meta name="keywords" content="assignment help, online classes, essays, exams, projects, homework help, dissertation writing, thesis writing, online tutoring, affordable assignment help" />
 
-    <title>Home|| Master's Assignment Help</title>
+   
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
@@ -38,47 +38,7 @@
 <!--Start of Tawk.to Script-->
 
 <!--End of Tawk.to Script-->
-
-<nav class="navbar navbar-expand-md navbar-light nav-background nav-bg text-white">
-    <div class=" container-fluid justify-content-center ">
-        <ul class="navbar-nav pt-2">
-            <li class="nav-item px-2
-            pt-2">+19143174571 
-</li>
-            
-            <li class="nav-item px-2 pt-2">Mastersassignmenth@gmail.com </li>
-            <li class="nav-item px-2 rounded bg-success pt-2 pb-2 "><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="text-white whatsapp-link" >Order On Whatsapp</a></li>
-        </ul>
-    </div>
-    </nav>
-
-    <nav class="navbar navbar-expand-md navbar-light nav-background mt-3 mb-5 pb-5 mx-5 px-4">
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-8">
-        <a class="navbar-brand" href="/"><img src="{{ asset('/images/logo.png') }}" class="img-fluid" alt="logo"></a>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end text-center" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-3">
-            <li class="nav-item link">
-                <a class="nav-link text-black" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item link">
-                <a class="nav-link text-black" href="#">Blog</a>
-            </li>
-            <li class="nav-item link">
-                  <a class="nav-link text-black" href="/faqs">Faqs</a>
-                </li>
-            <li class="nav-item link">
-                <a class="nav-link text-black" href="#about">About Us</a>
-            </li>
-            <li class="nav-item link">
-                <a class="nav-link nav-bg text-white rounded" href="{{ route('order') }}">Order Now</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+@include('includes.nav')
 
 
 
@@ -342,7 +302,7 @@ text-center text-primary">What Students Say About Us</h2>
 
     <div class="container mt-5 justify-content-center text-center">
         <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 text-center mt-3">
+            <div class="col text-center mt-3 mx-5">
                 <div class="card text-center">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
@@ -365,7 +325,7 @@ text-center text-primary">What Students Say About Us</h2>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-3 mt-3 text-center">
+            <div class="col mt-3 text-center mx-5">
                 <div class="card">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
@@ -386,7 +346,7 @@ text-center text-primary">What Students Say About Us</h2>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-3 mt-3 justify-content-center text-center">
+            <div class="col mt-3 justify-content-center text-center mx-5">
                 <div class="card">
                     <div class="face front-face">
                         <img src="https://images.unsplash.com/photo-1614574762522-6ac2fbba2208?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjY2fHxtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
@@ -419,60 +379,8 @@ text-center text-primary">What Students Say About Us</h2>
 
 
 
-<!--footer--><div class="container-fluid mt-5 border-top justify-content-center text-danger" id="contact">
-  <div class="row mt-3 text-black">
-
-<div class="col-xl-3 col-lg-3 col-md-3 text-center"><img src="{{ asset('/images\logo.png') }}" height="70px"  alt="logo"></div>
-<div class="col-xl-3 col-lg-3 col-md-3 text-center">
-  <h3 class="default-color pt-2 text-center">About Us</h3>
-
-
-
-
-
-
-
-<ul class="links" >
-  <li><a href="#about" class="links text-center">Our story</a></li>
- 
-
-</ul>
-</div>
-<div class="col-xl-3 col-lg-3 col-md-3 text-center">
-  <h3 class="default-color pt-2 text-center">Our Services</h3>
-<ul class="links">
-  <li><a href="#" class="links">Assignment Writing</a></li>
-  <li><a href="#" class="links">Essay Writing</a></li>
-  <li><a href="#"class="links">Dissertation Writing</a></li>
-  <li><a href="#" class="links">Coursework Help</a></li>
-  <li><a href="#" class="links">Thesis Help</a></li>
-  <li><a href="#" class="links">Open Book Exams</a></li>
-  <li><a href="#" class="links">Resume Assignment Writing</a></li>
-
-  
-  
-</ul>
-</div>
-<div class="col-xl-3 col-lg-3 col-md-3 text-center">
-<h3 class="default-color pt-2">Self Care/Support</h3>
-<ul class="links">
-  <li><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="links"> <i class="fab fa-whatsapp text-success"> </i>+19143174571</a></li>
-  <li><a href="" class="links"><i class="fas fa-envelope text-danger"></i> Mastersassignmenth@gmail.com</a></li>
-  <li><a href="#" class="links">Refund Policy</a></li>
-  <li><a href="#" class="links">Order Cancellation Policy</a></li>
-  <li><a href="#" class="links">Terms and Conditions</a></li>
-  <li><a href="#" class="links">Privacy Policy</a></li>
-  <li><a href="#" class="links">Fair usage Policy</a></li>
-  <li><a href="#" class="links">Honor Code</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="container mt-5">
-  <p class="text-center mt-5"><strong>@Copyright 2024</strong></p>
-</div>
-
+<!--footer-->
+@include('includes.footer')
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
