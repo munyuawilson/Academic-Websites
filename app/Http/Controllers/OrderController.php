@@ -118,7 +118,7 @@ $total_Price=0;
             $to = $email;
             $subject = 'New Order Details';
             $htmlContent = $this->generateOrderEmailContent($data, $total_Price,$orderId);
-            $this->mailer->sendEmail($to, $subject, $htmlContent,['wmunyua4@gmail.com',"Mastersassignmenth@gmail.com"]);
+            $this->mailer->sendEmail($to, $subject, $htmlContent,['wmunyua4@gmail.com',"topessaytutors@gmail.com"]);
         //send to the site admin
       /*  $to = "Mastersassignmenth@gmail.com";
         $subject = 'New Order Details';

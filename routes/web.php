@@ -32,7 +32,7 @@ Route::get("/admin/login",function (){
 
 Route::post("/admin/login","App\Http\Controllers\LoginController@login")->name("login");
 
-Route::get('/dashboard',"App\Http\Controllers\logincontroller@show_name"
+Route::get('/dashboard',"App\Http\Controllers\LoginController@show_name"
 )->name('Dashboard')->middleware('auth');
 
 Route::get('/logout',"App\Http\Controllers\LoginController@logout")->name('logout');
@@ -67,5 +67,5 @@ Route::post('/confirm',"App\Http\Controllers\LoginController@confirmCode");
 
 
 Route::get('/samples','App\Http\Controllers\BlogController@Sample');
-Route::get('/blog','App\Http\Controllers\Blogcontroller@blog');
+Route::get('/blog','App\Http\Controllers\BlogController@blog');
 

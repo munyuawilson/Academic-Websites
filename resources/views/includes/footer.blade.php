@@ -36,7 +36,7 @@
 <h3 class="default-color pt-2">Self Care/Support</h3>
 <ul class="links">
   <li><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="links"> <i class="fab fa-whatsapp text-success"> </i>+19143174571</a></li>
-  <li><a href="" class="links"><i class="fas fa-envelope text-danger"></i> Mastersassignmenth@gmail.com</a></li>
+  <li><a href="" class="links"><i class="fas fa-envelope text-danger"></i> topessaytutors@gmail.com</a></li>
   <li><a href="#" class="links">Refund Policy</a></li>
   <li><a href="#" class="links">Order Cancellation Policy</a></li>
   <li><a href="#" class="links">Terms and Conditions</a></li>

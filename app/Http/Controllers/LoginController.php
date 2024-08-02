@@ -30,7 +30,7 @@ class LoginController extends Controller
         
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             $user = Auth::user();
-            if ($email=="wmunyua4@gmail.com"){
+            if ($email=="opessaytutors@gmail.com"){
                 return redirect()->route('Dashboard');}
            
         } 
@@ -173,7 +173,7 @@ return view('pages/confirm');
         if ($realCode==$code){
             //add to database
              $user = User::where('email', $email)->first();
-             dump("real value");
+             
             
     if ($user){
 
