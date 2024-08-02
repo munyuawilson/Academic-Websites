@@ -25,7 +25,21 @@
     
 </div>
 <p class="pt-2">Already have an account?<a href="/login" class=""> Log in</a> </p>
+
+@if ($errors->any())
+    <div class="alert alert-danger mt-3">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<!-- Signup form HTML here -->
+
 </div>
+
 </form>
 </div>
 @include('layouts.includes.footer')

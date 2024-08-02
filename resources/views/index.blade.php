@@ -2,10 +2,10 @@
 
 @include('layouts.includes.nav')
 
-<div class="container-fluid mb-5  bg-image add-margin">
+<div class="container-fluid mb-5  bg-image ">
 
 <div class="row mb-5">
-    <div class="col text-center text-banner">
+    <div class="col text-center text-banner pt-5 mt-5">
 <h4 class="text-black">Undergraduate Assignment Help</h4>
 
 <p class="text-black pt-3">Are you having trouble with the grades? Hire our best tutors online</p>
@@ -25,7 +25,7 @@
 </div>
 
 
-<div class="container  adding-margin">
+<div class="container-fluid  adding-margin">
     <div class="row pt-5 pb-5 ">
 
         <div class="col border shadow rounded pb-4 mx-5 bg-white">
@@ -48,7 +48,7 @@
     <div class="row mt-3 ">
         <div class="col border-end border-success border-bottom ">
 
-    <h5 class="text-success pt-5">120</h5><p class="pb-2 pt-1">Happy Clients</p>
+    <h5 class="text-success pt-5">1570</h5><p class="pb-2 pt-1">Happy Clients</p>
 
     </div>
     <div class="col border-end border-success border-bottom">
@@ -60,7 +60,7 @@
 
     </div>
     <div class="col border-end border-success border-bottom">
-   <h5 class="text-success pt-5"> 230</h5><p class="pb-2 pt-1">Trusted Tutors</p>
+   <h5 class="text-success pt-5"> 540</h5><p class="pb-2 pt-1">Trusted Tutors</p>
 
     </div></div>
     
@@ -127,7 +127,7 @@
 <div class="container-fluid mt-5 bg-features pt-3 ">
 
 
-<div class="container bg-white mt-3 pt-5 ">q
+<div class="container bg-white mt-3 pt-5 ">
     <h2 class="text-center">Why Custom Paper Writing Service?</h2>
 <p class="text-center">_______</p>
 <div class="row mx-3 mt-5 mb-3">

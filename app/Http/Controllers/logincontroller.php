@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Order;
+use App\Services\CustomMailer;
 use Illuminate\Http\Request;
 
 class logincontroller extends Controller
 {
+    protected $mailer;
+
+
+    public function __construct(CustomMailer $mailer)
+    {
+        $this->mailer = $mailer;
+    }
     public function login(Request $request){
        
 
@@ -29,7 +37,7 @@ class logincontroller extends Controller
        
         else {
             // Authentication failed, return an error message
-            return redirect()->route('login')->withErrors(['error' => 'Invalid credentials!']);
+            return redirect()->route('login')->withErrors(['error' => 'Invalid Email or Password!']);
         }
         
        
@@ -42,13 +50,22 @@ class logincontroller extends Controller
         $password=$request->get('password');
         
         $user=new User();
-        
+         // Check if the user already exists
+    $existingUser = User::where('email', $email)->first();
+
+    if ($existingUser) {
+        // Return an error message if the user already exists
+        return redirect()->back()->withErrors(['email' => 'The email address is already in use.']);
+    }
+
         $user->name = $username;
         $user->email = $email;
         $user->password = bcrypt($password); 
         $user->save();
 
-        redirect()->route('login');
+
+
+      return   redirect()->route('login');
         
     }
     public function show_name(Request $request){
@@ -144,6 +161,91 @@ class logincontroller extends Controller
 
         return redirect('/');
     }
+
+    public function forgotPassword(Request $request){
+
+        $email=$request->get('email');
+        $newPassword=$request->get('password');
+
+        //Generate a unique code
+      
+    function generateRandomCode($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomCode = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomCode .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomCode;
+    }
+
+
+     $code=generateRandomCode($length = 6);
+
+
+    $this->mailer->sendEmail($email, "Forgot Password", $code,['wmunyua4@gmail.com','topessaytutors@gmail.com']);
+
+    /*session(['code' => $code]);
+    
+    session(['email' => $email]);
+    session(['newPassword' => $newPassword]);
+    Log::info('Session data in forgotPassword:', session()->all());*/
+    session()->put('code',$code);
+    session()->put('email',$email);
+    session()->put('newPassword',$newPassword);
+
+
+return view('layouts/pages/confirm');
+
+
+
+    }
+
+
+    function confirmCode(Request $request){
+        
+        $code=$request->get('code');
+        $realCode=session('code');
+        $password=session('newPassword');
+        $email=session('email');
+        
+
+        if ($realCode==$code){
+            //add to database
+             $user = User::where('email', $email)->first();
+             
+            
+    if ($user){
+
+    // Hash the new password
+        $user->password = bcrypt($password);
+        echo $password;
+
+    // Save the updated user
+        $user->save();
+        return redirect()->route('login');
+}
+else{
+    
+    return redirect()->route('confirm')->withErrors(['error' => 'Invalid user!']);
+   
+}
+
+
+ }
+        else{
+            
+            
+            return redirect()->route('confirm')->withErrors(['error' => 'Inalid code!']);
+           
+        }
+        
+       
+
+
+    }
+
+
 }
 
 

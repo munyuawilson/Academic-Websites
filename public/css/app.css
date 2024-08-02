@@ -12,7 +12,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ;
-    
+    height: 700px;
     
    
     
@@ -43,7 +43,7 @@ a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    
     border: none;
     border-radius: 0;
     margin-bottom: 40px;

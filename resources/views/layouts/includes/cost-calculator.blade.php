@@ -1,4 +1,4 @@
-<div class="col mx-5 mb-4 text-center bg-white rounded mt-5 pb-1 px-3 shadow-sm mt-2 ">
+<div class="col  mb-4 text-center bg-white rounded mt-5 pb-1 px-3 shadow-sm mt-2 ">
         <h4 class="pt-5">Calculate the Price</h4>
         <form action="" class="form">
             <div class="form-group ">

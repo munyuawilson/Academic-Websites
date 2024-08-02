@@ -64,5 +64,16 @@ Route::get('/blog',"App\Http\Controllers\blogcontroller@blog")->name('blog');
 Route::post('/admin/samples',"App\Http\Controllers\blogcontroller@writeSamples")->name('samples');
 
 Route::get('/admin/samples',function(){
-    return view('layouts.pages.admin.samples')->middleware('auth');
+    return view('layouts.pages.admin.samples');
 });
+
+
+Route::get('/forgot-password',function(){
+    return view('layouts.pages.forgot-password');
+})->name('forgotPassword');
+Route::post('/forgot-password',"App\Http\Controllers\logincontroller@forgotPassword")->name('confirmCode');
+
+Route::get('/confirm',function(){
+    return view('layouts.pages.confirm');
+})->name('confirm');
+Route::post('/confirm',"App\Http\Controllers\logincontroller@confirmCode");
