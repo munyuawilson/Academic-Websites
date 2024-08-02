@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Log In</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>blogPosts</title>
 <meta name="description" content="MasterAssignmentHelp.com provides online assignment help for students. Our team of experts can help you with essays, online classes, exams, projects, and more. Get high grades and reduce stress with our affordable services. Contact us on WhatsApp today!" />
 <meta name="keywords" content="assignment help, online classes, essays, exams, projects, homework help, dissertation writing, thesis writing, online tutoring, affordable assignment help" />
 
-   
+    
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
@@ -25,49 +29,53 @@
   rel="stylesheet"
 />
 <!-- MDB -->
+
 </head>
-<body>
-    
 @include('includes.nav')
 
-<div class="d-flex  justify-content-center mt-5  border px-3 pt-3 pb-5 shadow" >
+<div class="container">
+    <header class="blog-header text-center">
+        <h1 class="blog-title">Blog</h1>
+        <p class="lead">Welcome to the Blogs page where we share Academic research and exciting stories.</p>
+    </header>
 
-<form action="/admin/login" method="post">
-@csrf
-    <h4 class="pt-2 fw-bold text-center">Log-In</h4>
-    <div class="border border-black fw-black px-3 pt-3 pb-2 rounded shadow">
+    <main role="main" class="pb-3">
+        <div class="row pt-5">
+            <div class="col-md-8">
+                @foreach ($blogPosts as $sample)
+                    <div class="blog-post mb-4">
+                        <h2 class="blog-post-title">{{ $sample->title }}</h2>
+                        <p class="blog-post-meta">{{ $sample->created_at->format('F j, Y') }} by <a href="#">Author</a></p>
+                        <p>{{ $sample->content }}</p>
+                       
+                    </div>
+                @endforeach
 
-<div class="form-group mt-2">
-<label for="email">Email</label>
-<input type="email" id="email" name="email"placeholder="Email" class="form-control" required> 
+                <!-- Pagination -->
+                {{ $blogPosts->links('pagination::bootstrap-5') }}
+            </div>
+
+            <aside class="col-md-4">
+                <div class="sidebar">
+                    <h4>About Us</h4>
+                    <p>Best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom.</p>
+                    <h4>Recent Posts</h4>
+                    <ul class="list-unstyled">
+                        @foreach ($blogPosts as $sample)
+                            <li><a href="#">{{ $sample->title }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
 </div>
-<div class="form-group mt-2">
-<label for="password">Password</label>
-<input type="password"  placeholder="Password"  class=" form-control " id="password" name="password" required> 
-    
-</div>
-<div class="form-group mt-3">
 
-<input type="submit" class="btn btn-primary " value="Log-in"> 
-    
-</div>
-<a href="/forgot-password" style="color: #999;">Forgot Password?</a>
-
-@if ($errors->any())
-    <div class=" text-center alert alert-danger alert-dismissible fade show" role="alert">
-        {{ $errors->first() }}
-
-</div>
-@endif
-</div>
-</form>
-
-</div>
-
+]
 @include('includes.footer')
-
 </body>
-
+<script src="{{ asset('/js/index.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 

@@ -31,3 +31,41 @@ Route::get("/admin/login",function (){
 })->name("login");
 
 Route::post("/admin/login","App\Http\Controllers\LoginController@login")->name("login");
+
+Route::get('/dashboard',"App\Http\Controllers\logincontroller@show_name"
+)->name('Dashboard')->middleware('auth');
+
+Route::get('/logout',"App\Http\Controllers\LoginController@logout")->name('logout');
+
+Route::get('/admin/completed',"App\Http\Controllers\LoginController@completed")->name('completed');
+
+Route::get('/admin/revision',"App\Http\Controllers\LoginController@revision")->name('dashboard-revision');
+
+Route::get('/admin/disputed',"App\Http\Controllers\LoginController@disputed")->name('disputed');
+Route::get('/admin/paid',"App\Http\Controllers\LoginController@paid")->name('paid');
+Route::get('/admin/progress',"App\Http\Controllers\LoginController@InProgress")->name('progress');
+Route::get('/admin/addblog',function(){
+    return view('pages.admin.addblog');
+})->name('writeblog');
+Route::post('/admin/addblog',"App\Http\Controllers\BlogController@writeblog")->name('writeblog');
+
+Route::post('/admin/samples',"App\Http\Controllers\BlogController@writeSamples")->name('samples');
+
+Route::get('/admin/samples',function(){
+    return view('pages.admin.samples');
+});
+
+Route::get('/forgot-password',function(){
+    return view('pages.forgot-password');
+})->name('forgotPassword');
+Route::post('/forgot-password',"App\Http\Controllers\LoginController@forgotPassword")->name('confirmCode');
+
+Route::get('/confirm',function(){
+    return view('pages.confirm');
+})->name('confirm');
+Route::post('/confirm',"App\Http\Controllers\LoginController@confirmCode");
+
+
+Route::get('/samples','App\Http\Controllers\BlogController@Sample');
+Route::get('/blog','App\Http\Controllers\Blogcontroller@blog');
+

@@ -216,16 +216,16 @@ a.article:hover {
 </head>
 <body>
     
-@include('layouts.includes.sidebaradmin')
+@include('includes.sidebaradmin')
 
         <!-- Page Content  -->
         <div id="content">
 
-        @include('layouts.includes.topadminnav')   
+        @include('includes.topadminnav')   
 
         <div class="container mt-5">
         <h2 class="text-center pb-5">Completed</h2>
-        @include('layouts.includes.table')
+        @include('includes.table')
     </div>
     </div>
     </body>

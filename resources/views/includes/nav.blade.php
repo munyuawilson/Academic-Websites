@@ -26,7 +26,10 @@
                   <a class="nav-link  text-black" href="">Contact</a>
                 </li>
                 <li class="nav-item link">
-                  <a class="nav-link text-black" href="">Blog</a>
+                  <a class="nav-link text-black" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item link">
+                  <a class="nav-link text-black" href="/samples">Samples</a>
                 </li>
                 <li class="nav-item link">
                   <a class="nav-link text-black" href="/faqs">Faqs</a>

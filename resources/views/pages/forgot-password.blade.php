@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Log In</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forgot Password</title>
 <meta name="description" content="MasterAssignmentHelp.com provides online assignment help for students. Our team of experts can help you with essays, online classes, exams, projects, and more. Get high grades and reduce stress with our affordable services. Contact us on WhatsApp today!" />
 <meta name="keywords" content="assignment help, online classes, essays, exams, projects, homework help, dissertation writing, thesis writing, online tutoring, affordable assignment help" />
 
@@ -25,16 +29,27 @@
   rel="stylesheet"
 />
 <!-- MDB -->
+
 </head>
-<body>
-    
+
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/665c9fc4981b6c5647777b17/1hvct06b2';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
 @include('includes.nav')
 
 <div class="d-flex  justify-content-center mt-5  border px-3 pt-3 pb-5 shadow" >
-
-<form action="/admin/login" method="post">
+<form action="/forgot-password" method="post" id="passwordForm">
 @csrf
-    <h4 class="pt-2 fw-bold text-center">Log-In</h4>
+    <h4 class="pt-2 fw-bold text-center">Forgot Password</h4>
     <div class="border border-black fw-black px-3 pt-3 pb-2 rounded shadow">
 
 <div class="form-group mt-2">
@@ -42,16 +57,21 @@
 <input type="email" id="email" name="email"placeholder="Email" class="form-control" required> 
 </div>
 <div class="form-group mt-2">
-<label for="password">Password</label>
-<input type="password"  placeholder="Password"  class=" form-control " id="password" name="password" required> 
+<label for="password">New Password</label>
+<input type="password"  placeholder="Password"  class=" form-control " id='password' name="password" required> 
+    
+</div>
+<div class="form-group mt-2">
+<label for="password">Confirm Password</label>
+<input type="password"  placeholder="Repeat Password"  class=" form-control " id='confirmPassword' name="password" required> 
     
 </div>
 <div class="form-group mt-3">
 
-<input type="submit" class="btn btn-primary " value="Log-in"> 
+<input type="submit" class="btn btn-primary " value="Submit"> 
     
 </div>
-<a href="/forgot-password" style="color: #999;">Forgot Password?</a>
+
 
 @if ($errors->any())
     <div class=" text-center alert alert-danger alert-dismissible fade show" role="alert">
@@ -61,23 +81,30 @@
 @endif
 </div>
 </form>
-
 </div>
-
 @include('includes.footer')
 
+
+<script>
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+             // Prevent form submission
+
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                alert('Passwords do not match. Please try again.');
+            } 
+            
+        });
+    </script>
+
+  
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
 <!-- MDB -->
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.umd.min.js"
 ></script>
-
 </html>

@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<link rel="stylesheet" href="{{ asset('/css/app.css') }}">
+
 <link
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
   rel="stylesheet"
 />
+
 <style>
     /*
     DEMO STYLE
 */
-
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    
 }
 
 p {
@@ -69,12 +69,13 @@ a:focus {
     display: flex;
     width: 100%;
     align-items: stretch;
+    
 }
 
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-   
+    background-color: rgb(3, 45, 87);
     color: #fff;
     transition: all 0.3s;
 }
@@ -210,11 +211,10 @@ a.article:hover {
             color: #17a2b8;
         }
         
-
 </style>
 
 </head>
-<body>
+
     
 @include('includes.sidebaradmin')
 
@@ -283,7 +283,7 @@ a.article:hover {
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                             <i class="fas fa-check-circle font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 success float-right" id="dashboard-available-count">{{$paidCount}}</span>
+                                <span class="font-large-2 text-bold-300 success float-right" id="dashboard-available-count">{{$PaidCount}}</span>
                             </div>
                             <div>
                                 <h3 class="blue-grey">Paid</h3>
@@ -294,7 +294,7 @@ a.article:hover {
                         <div class="pb-1">
                             <div class="clearfix mb-1">
                             <i class="fas fa-sync-alt font-large-1 blue-grey float-left mt-1"></i>
-                                <span class="font-large-2 text-bold-300 info float-right" id="dashboard-inprogress-count">{{$revisedCount}}</span>
+                                <span class="font-large-2 text-bold-300 info float-right" id="dashboard-inprogress-count">{{$RevisionCount}}</span>
                             </div>
                             <div>
                                 <h3 class="blue-grey">Revision</h3>
@@ -340,7 +340,7 @@ a.article:hover {
 
 
         </div>
-    </div>
+    
 
    
 

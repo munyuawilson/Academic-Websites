@@ -3,8 +3,8 @@
         <!-- Sidebar  -->
         <nav id="sidebar" class="nav-bg">
             <div class="sidebar-header ">
-            <a class="navbar-brand  fw-bold" href="/">
-        <img src="{{ asset('/images/logowhite.png') }}" class="img-fluid " alt="logo" height="50px">
+            <a class="navbar-brand  fw-bold" href="/dashboard">
+        <img src="{{ asset('/images/logo.png') }}" class=" " alt="logo" height="50px">
         
       </a>
             </div>
@@ -13,7 +13,7 @@
                 
                
             <li class="">
-                    <a href="/admin"><i class="fas fa-tachometer-alt"></i> Admin</a>
+                    <a href="/dashboard"><i class="fas fa-tachometer-alt"></i> Admin</a>
                 </li>
                 <li>
                     <a href="/admin/progress"><i class="fas fa-spinner"></i> In Progress</a>
