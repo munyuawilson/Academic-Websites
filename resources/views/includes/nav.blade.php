@@ -7,7 +7,6 @@
 </li>
             
             <li class="nav-item px-2 pt-2">topessaytutors@gmail.com</li>
-            <li class="nav-item px-2 rounded bg-success pt-2 pb-2 "><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="text-white whatsapp-link" >Order On Whatsapp</a></li>
         </ul>
     </div>
     </nav>
@@ -36,6 +35,9 @@
                 </li>
                 <li class="nav-item link">
                   <a class="nav-link text-black" href="{{route('index')}}#about">About Us</a>
+                </li>
+                <li class="nav-item link">
+                  <a class="nav-link text-white nav-bg rounded" href="/order">Order Now</a>
                 </li>
                 
                 

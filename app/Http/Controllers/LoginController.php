@@ -30,12 +30,18 @@ class LoginController extends Controller
         
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             $user = Auth::user();
-            if ($email=="opessaytutors@gmail.com"){
-                return redirect()->route('Dashboard');}
+            if ($email=="wmunyua4@gmail.com"){
+                return redirect('/dashboard');}
+
+            else if ($email=="topessaytutors@gmail.com"){
+                    return redirect('/dashboard')}
+            else{
+                return view('pages/admin/log-in');
+            }
            
         } 
         else{
-            return redirect()->route('login')->withErrors(['error' => 'No such user!']);
+            return redirect()->route('login')->withErrors(['error' => 'Wrong user credentials!!']);
 
         }
       

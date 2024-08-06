@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Samples</title>
-<meta name="description" content="MasterAssignmentHelp.com provides online assignment help for students. Our team of experts can help you with essays, online classes, exams, projects, and more. Get high grades and reduce stress with our affordable services. Contact us on WhatsApp today!" />
+<meta name="description" content="MasterAssignmentHelp provides online assignment help for students. Our team of experts can help you with essays, online classes, exams, projects, and more. Get high grades and reduce stress with our affordable services. Contact us on WhatsApp today!" />
 <meta name="keywords" content="assignment help, online classes, essays, exams, projects, homework help, dissertation writing, thesis writing, online tutoring, affordable assignment help" />
 
     
@@ -45,8 +45,8 @@
                 @foreach ($samples as $sample)
                     <div class="blog-post mb-4">
                         <h2 class="blog-post-title">{{ $sample->title }}</h2>
-                        <p class="blog-post-meta">{{ $sample->created_at->format('F j, Y') }} by <a href="#">Author</a></p>
-                        <p>{{ $sample->content }}</p>
+                        
+                        <p>{!! $sample->content !!}</p>
                        
                     </div>
                 @endforeach

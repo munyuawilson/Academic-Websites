@@ -45,8 +45,7 @@
                 @foreach ($blogPosts as $sample)
                     <div class="blog-post mb-4">
                         <h2 class="blog-post-title">{{ $sample->title }}</h2>
-                        <p class="blog-post-meta">{{ $sample->created_at->format('F j, Y') }} by <a href="#">Author</a></p>
-                        <p>{{ $sample->content }}</p>
+                        <p>{!! $sample->content !!}</p>
                        
                     </div>
                 @endforeach
