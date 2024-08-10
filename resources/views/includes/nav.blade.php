@@ -6,7 +6,7 @@
             pt-2">+19143174571 
 </li>
             
-            <li class="nav-item px-2 pt-2">topessaytutors@gmail.com</li>
+            <li class="nav-item px-2 pt-2"><a href="mailto:topessaytutors@gmail.com">topessaytutors@gmail.com</a></li>
         </ul>
     </div>
     </nav>
@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse justify-content-end "   id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item link">
-                  <a class="nav-link  text-black" href="">Contact</a>
+                  <a class="nav-link  text-black" href="mailto:topessaytutors@gmail.com">Contact</a>
                 </li>
                 <li class="nav-item link">
                   <a class="nav-link text-black" href="/blog">Blog</a>
@@ -37,7 +37,7 @@
                   <a class="nav-link text-black" href="{{route('index')}}#about">About Us</a>
                 </li>
                 <li class="nav-item link">
-                  <a class="nav-link text-white nav-bg rounded" href="/order">Order Now</a>
+                  <a class="nav-link text-white text-center nav-bg rounded" href="/order">Order Now</a>
                 </li>
                 
                 

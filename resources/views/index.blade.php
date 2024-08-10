@@ -48,7 +48,7 @@
 
 
 
-<div class="container-fluid mt-5 animated-section animate__animated animate__fadeInUp animate__slow 5s animate__delay-.5s">
+<div class="container-fluid mt-5">
 
 
 <div class="row mt-5">
@@ -112,6 +112,43 @@
 
 
 </div>
+
+
+<!--pop up-->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <h2>Need Help with Your Master's Assignments?</h2>
+        <p>Get expert assistance with your assignments, research papers, and thesis projects. Our experienced team is here to support you with high-quality and timely help.</p>
+        <a href="/faqs" class="btn">Explore Our Services</a>
+        <a href="mailto:topessaytutors@gmail.com" class="btn">Contact Us</a>
+    </div>
+
+<script>
+  // Get the popup
+var popup = document.getElementById("popup");
+
+// Get the <span> element that closes the popup
+var span = document.getElementById("closePopup");
+
+// Show the popup when the page loads
+window.onload = function() {
+    popup.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the popup
+span.onclick = function() {
+    popup.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the popup, close it
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+
+</script>
 <!--About Us!-->
 
 <div class="container mt-4" id="about">

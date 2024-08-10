@@ -34,7 +34,7 @@ class LoginController extends Controller
                 return redirect('/dashboard');}
 
             else if ($email=="topessaytutors@gmail.com"){
-                    return redirect('/dashboard')}
+                    return redirect('/dashboard');}
             else{
                 return view('pages/admin/log-in');
             }
