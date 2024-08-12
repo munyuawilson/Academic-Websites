@@ -68,4 +68,7 @@ Route::post('/confirm',"App\Http\Controllers\LoginController@confirmCode");
 
 Route::get('/samples','App\Http\Controllers\BlogController@Sample');
 Route::get('/blog','App\Http\Controllers\BlogController@blog');
-
+Route::get('/admin/deleteblog','App\Http\Controllers\BlogController@returnblogs');
+Route::post('/blogs/{id}','App\Http\Controllers\BlogController@destroy');
+Route::get('/admin/deletesamples','App\Http\Controllers\BlogController@returnsamples');
+Route::post('/samples/{id}','App\Http\Controllers\BlogController@destroysamples');

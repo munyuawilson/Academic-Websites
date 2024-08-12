@@ -45,7 +45,41 @@ function writeSamples(Request $request){
 
 function Sample(){
     $samples = Sample::latest()->paginate(10);
+    
     return view('pages.samples',compact('samples'));
  }
+
+ function returnsamples(){
+
+    $samples = Sample::all();
+
+    return view('pages.admin.deletesamples',compact('samples'));
+ }
+ function returnblogs(){
+
+    $blogs = Blog::all();
+
+    return view('pages.admin.deleteblog',compact('blogs'));
+ }
+  function destroy($id)
+    {
+         // Find the blog post by ID
+    $blog = Blog::findOrFail($id);
+
+    // Delete the blog post
+    $blog->delete();
+
+        return redirect('/admin/deleteblog');
+    }
+    function destroysamples($id)
+    {
+         // Find the blog post by ID
+    $sample = Sample::findOrFail($id);
+
+    // Delete the blog post
+    $sample->delete();
+
+        return redirect('/admin/deletesamples');
+    }
 
 }

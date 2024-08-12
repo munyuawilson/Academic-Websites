@@ -12,7 +12,27 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     
-   
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var popup = document.getElementById("popup");
+    var span = document.getElementById("closePopup");
+    
+    window.onload = function() {
+        popup.style.display = "block";
+    }
+    
+    span.onclick = function() {
+        popup.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == popup) {
+            popup.style.display = "none";
+        }
+    }
+  });
+</script>
+
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
@@ -77,19 +97,19 @@
 <!-- Full-width images with number and caption text -->
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="{{ asset('/images\logo.png') }}" style="width:100%">
+  <img src="{{ asset('/images\2.png') }}"  height="250px">
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="{{ asset('/images\logo.png') }}" style="width:100%">
+  <img src="{{ asset('/images\6.png') }}" height="250px">
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="{{ asset('/images\logo.png') }}" style="width:100%">
+  <img src="{{ asset('/images\7.png') }}" height="250px">
   
 </div>
 
@@ -114,47 +134,15 @@
 </div>
 
 
-<!--pop up-->
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span id="closePopup" class="close">&times;</span>
-        <h2>Need Help with Your Master's Assignments?</h2>
-        <p>Get expert assistance with your assignments, research papers, and thesis projects. Our experienced team is here to support you with high-quality and timely help.</p>
-        <a href="/faqs" class="btn">Explore Our Services</a>
-        <a href="mailto:topessaytutors@gmail.com" class="btn">Contact Us</a>
-    </div>
 
-<script>
-  // Get the popup
-var popup = document.getElementById("popup");
 
-// Get the <span> element that closes the popup
-var span = document.getElementById("closePopup");
 
-// Show the popup when the page loads
-window.onload = function() {
-    popup.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the popup
-span.onclick = function() {
-    popup.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the popup, close it
-window.onclick = function(event) {
-    if (event.target == popup) {
-        popup.style.display = "none";
-    }
-}
-
-</script>
 <!--About Us!-->
 
 <div class="container mt-4" id="about">
     <h2 class="text-center text-primary animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">Take my Online Class Help for Me</h2>
 
-<p class="text-center mt-5 ">MasterAssignmentHelp.com is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
+<p class="text-center mt-5 ">Masters.undergraduate.com is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
 
 
 <h2 class="text-center text-primary mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">Who We Are?</h2>
@@ -204,6 +192,7 @@ window.onclick = function(event) {
 </div>
 </div>
 </div>
+
 
 
 
@@ -287,7 +276,7 @@ window.onclick = function(event) {
 
     <p>In today advanced era, we are supposed to manage dozens of tasks daily. For students, it is a hard nut to crack to manage their routine work as they are likely to be engaged in different activities. Moreover, various students have to do part time job to meet their expenses as well.  Various responsibilities on students drain their energy. Therefore, students have little time to enjoy after spending hours of their time in colleges and universities. 
 
-<p>However, MasterAssignmentHelp is always there to help students by mitigating their load. We get you covered in assignment writings, essay writing, online classes, online complete courses, online exams help, and projects. Our team of experts of all subjects will help you to get high grades in all the given tasks. So, don’t compromise on your freedom and share your burden with us. Be smart and just contact us on the given WhatsApp and discuss your tasks with us. </p>
+<p>However, Masters.topessaytutors is always there to help students by mitigating their load. We get you covered in assignment writings, essay writing, online classes, online complete courses, online exams help, and projects. Our team of experts of all subjects will help you to get high grades in all the given tasks. So, don’t compromise on your freedom and share your burden with us. Be smart and just contact us on the given WhatsApp and discuss your tasks with us. </p>
 </p> </div>
   </div>
 </div>
@@ -413,13 +402,26 @@ text-center text-primary">What Students Say About Us</h2>
 </div>
 
 
-  
-
 
 
 
 <!--footer-->
 @include('includes.footer')
+  
+
+
+  <!--pop up-->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <h2>Need Help with Your Master's Assignments?</h2>
+        <p>Get expert assistance with your assignments, research papers, and thesis projects. Our experienced team is here to support you with high-quality and timely help.</p>
+        <a href="/faqs" class="btn">Explore Our Services</a>
+        <a href="mailto:topessaytutors@gmail.com" class="btn">Contact Us</a>
+    </div>
+
+
+
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -433,8 +435,72 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
+
 <!--End of Tawk.to Script-->
+
+
 </body>
+<script>
+                var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?5120';
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = url;
+                var options = {
+                "enabled":true,
+                "chatButtonSetting":{
+                    "backgroundColor":"#00e785",
+                    "ctaText":"Chat with us",
+                    "borderRadius":"25",
+                    "marginLeft": "0",
+                    "marginRight": "20",
+                    "marginBottom": "20",
+                    "ctaIconWATI":false,
+                    "position":"left"
+                },
+                "brandSetting":{
+                    "brandName":"Wati",
+                    "brandSubTitle":"undefined",
+                    "brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+                    "welcomeText":"Hi there!\nHow can I help you?",
+                    "messageText":"Hello, %0AI have a question about Masters Assignment Help",
+                    "backgroundColor":"#00e785",
+                    "ctaText":"Chat with us",
+                    "borderRadius":"25",
+                    "autoShow":false,
+                    "phoneNumber":"19143174571"
+                }
+                };
+                s.onload = function() {
+                    CreateWhatsappChatWidget(options);
+                };
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(s, x);
+            </script>
+<script>
+  // Get the popup
+var popup = document.getElementById("popup");
+
+// Get the <span> element that closes the popup
+var span = document.getElementById("closePopup");
+
+// Show the popup when the page loads
+window.onload = function() {
+    popup.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the popup
+span.onclick = function() {
+    popup.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the popup, close it
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+</script>
 <script src="{{ asset('/js/index.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

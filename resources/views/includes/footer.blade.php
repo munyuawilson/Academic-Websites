@@ -32,7 +32,7 @@
   
 </ul>
 </div>
-<div class="col-xl-3 col-lg-3 col-md-3 text-center mx-5">
+<div class="col-xl-3 col-lg-3 col-md-3  col-sm-3 text-center mx-5">
 <h3 class="default-color pt-2">Self Care/Support</h3>
 <ul class="links">
   <li><a href="https://wa.me/message/DX4EZYSMFHSJP1" class="links"> <i class="fab fa-whatsapp text-success"> </i>+19143174571</a></li>
