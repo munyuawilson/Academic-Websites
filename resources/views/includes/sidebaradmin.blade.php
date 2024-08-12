@@ -40,11 +40,11 @@
                 </li>
                 <li>
                 <a href="/admin/deleteblog"><i class="fas fa-blog"></i>
-                    </i> Deleteblog</a>
+                    </i> Delete Blog</a>
                 </li>
                 <li>
                 <a href="/admin/deletesamples"><i class="fas fa-blog"></i>
-                    </i> Deletesamples</a>
+                    </i> Delete Samples</a>
                 </li>
                 <li>
                     <a href="/"><i class="fas fa-address-book"></i> Contact</a>

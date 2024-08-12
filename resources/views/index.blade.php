@@ -77,54 +77,25 @@
       <h2 class="text-center">Master Assignment Help Online for Students</h2>
         <h3 class="text-center">Your Gateway to Stress-Free Assignments 
 </h3>
-<div class="justify-content-center text-center mt-5">
-        <a href="https://wa.me/message/DX4EZYSMFHSJP1" class="nav-bg pt-2 pb-2 whatsapp-link rounded text-white px-2">Whatsapp Now</a>
-        </div>
 
 
-<ul class="list justify-content-center mt-3">
+
+<ul class="list justify-content-center mt-2 pt-4">
 
         <li> <span class="text-primary" style="font-size: 24px; font-weight: bold;">&#10003;</span> Instant Reply from our Team</li>
         <li> <span class="text-primary" style="font-size: 24px; font-weight: bold;">&#10003;</span> Affordable Prices with Quality Work</li>
         <li> <span class="text-primary" style="font-size: 24px; font-weight: bold;">&#10003;</span> All Subjects Experts From All over the World</li>
         <li> <span class="text-primary" style="font-size: 24px; font-weight: bold;">&#10003;</span> High Grades</li>
         </ul>
+        <div class="justify-content-center px-5 mt-5">
+        <a href="/order" class="nav-bg pt-2 pb-2 whatsapp-link rounded text-white px-2">Order Now!</a>
+        </div>
     </div>
-    <div class="col-md">
-        <!-- Slideshow container -->
-<div class="slideshow-container">
+    <div class="col-md text-center pt-4">
+       <img src="{{asset('/images\student1.webp')}}" class='img-fluid'alt="" height='300px'>
+        
 
-<!-- Full-width images with number and caption text -->
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="{{ asset('/images\2.png') }}"  height="250px">
-  
-</div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="{{ asset('/images\6.png') }}" height="250px">
-  
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="{{ asset('/images\7.png') }}" height="250px">
-  
-</div>
-
-<!-- Next and previous buttons -->
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-<span class="dot" onclick="currentSlide(1)"></span>
-<span class="dot" onclick="currentSlide(2)"></span>
-<span class="dot" onclick="currentSlide(3)"></span>
-</div>
     </div>
 </div>
 
@@ -142,18 +113,26 @@
 <div class="container mt-4" id="about">
     <h2 class="text-center text-primary animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">Take my Online Class Help for Me</h2>
 
-<p class="text-center mt-5 ">Masters.undergraduate.com is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
+<p class="text-center mt-5 ">Mastes.topessaytutors is one of the best online platforms to share the burden of students by delivering quality work which help them to rank higher in their studies. If you are also a student who is searching for an online educational assistance, look no further. We, team of professionals and experts of different subjects, are here to help you out, and never let you compromise on your freedom. Therefore, whether you want help in online classes, online courses, exams, assignments, MasterAssignmenthelp’s team will always be there to get you a sigh of relief.  Just contact on the given WhatsApp number and get an optimal solution of your all educational stress.</p>
 
 
 <h2 class="text-center text-primary mt-5 animated-section animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">Who We Are?</h2>
 <div class="row mt-5 animate__animated animate__fadeInUp animate__slow 2s animate__delay-.5s">
     <div class="col text-center justify-content-center">
         <img src="{{ asset('/images/WhatsApp-Image-2023-11-10-at-1.06.22-PM.jpeg') }}" alt="ceo" height="150px" class="ceo-image ">
-        <h4 class=" mt-5 mb-3 fav-color">CEO MasterAssignmentHelp</h4>
-        <div class="mt-5"> <a href="https://wa.me/message/DX4EZYSMFHSJP1"class="text-white whatsapp-link  rounded px-2 pb-2 pt-2  nav-bg">WhatsApp Now!</a></div>
-       
+        <h4 class=" mt-5 mb-3 fav-color">CEO Masters.topessaytutors</h4>
+        <div class="container mt-5 text-center">
+    <p class="mt-4 fst-italic">
+       "Welcome to Masters.topessaytutors.com! As the CEO, I am committed to ensuring that our platform provides the highest quality academic assistance. Our team of experts is dedicated to helping you achieve your academic goals with ease and confidence. Whether you need help with assignments, essays, or exams, we are here to support you every step of the way. Let's work together to make your academic journey successful and stress-free."
+    </p>
+    <p class="mt-3">
+        Best regards,<br>
+        <strong>CEO, Masters.topessaytutors.com</strong>
+    </p>
+</div>
+
     </div>
-    <div class="col-md-3 mt-3">
+    <div class="col mt-3">
 
 
 
@@ -343,7 +322,7 @@ text-center text-primary">What Students Say About Us</h2>
                     <div class="face back-face">
                         
                         <div class="testimonial">
-                            "Amazing work. worked done as they promised in conversation. I got an A grade on that assignment. All the process was stress free. love to work again"
+                        "Incredible work! The essay exceeded my expectations, and the A grade I received proves their expertise."
 
 
                         </div>
@@ -366,8 +345,7 @@ text-center text-primary">What Students Say About Us</h2>
                     <div class="face back-face">
                         
                         <div class="testimonial">
-                            "Amazing work. worked done as they promised in conversation. I got an A grade on that assignment. All the process was stress free. love to work again"
-                        </div>
+                        "Exceptional quality! They delivered on everything we talked about"                        </div>
                         <span class="material-symbols-outlined px-2 py-2">
                             format_quote
                             </span>
@@ -500,6 +478,23 @@ window.onclick = function(event) {
         popup.style.display = "none";
     }
 }
+</script>
+
+<script>
+    let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("show");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex - 1].classList.add("show");
+    setTimeout(showSlides, 5000); // Change image every 3 seconds
+}
+
 </script>
 <script src="{{ asset('/js/index.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
