@@ -50,7 +50,7 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 <div class="container accordion w-100 mt-5" id="basicAccordion">
-  <h1 class="text-center text-primary" id="faqs">Faqs</h1>
+  <h1 class="text-center fav-color" id="faqs">Faqs</h1>
   <div class="accordion-item mt-4" >
     <h2 class="accordion-header" id="headingOne">
       <button data-mdb-button-init  data-mdb-collapse-init class="accordion-button collapsed" type="button"
@@ -538,57 +538,498 @@ s0.parentNode.insertBefore(s1,s0);
     </div>
 </div>
 
-
-
 <div class="accordion-item">
     <h2 class="accordion-header" id="headingFourteen">
         <button data-mdb-button-init data-mdb-collapse-init class="accordion-button collapsed" type="button"
             data-mdb-target="#basicAccordionCollapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-            I am pursuing an MBA in human resource management. Please provide a guideline on how to answer these questions:
+            I am pursuing an MBA in Human Resource Management. How should I answer these questions?
         </button>
     </h2>
     <div id="basicAccordionCollapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
         data-mdb-parent="#basicAccordion">
         <div class="accordion-body">
-            <h4>1. Talk about the employee selection process and give examples. (500 words)</h4>
+            <h4>1. Discuss the Employee Selection Process and Provide Examples (500 words)</h4>
             <p>
-                Describe the role of the employee selection process which is to win the most qualified candidates who coincide with the company's requirements and culture.
+                The employee selection process is crucial for identifying candidates who are not only qualified but also fit well with the company's culture. The goal is to ensure that the right talent is hired to meet the company's needs.
             </p>
             <p>
-                Briefly explain key steps: according to the job requirements description and candidate profile, the recruitment process involves sourcing and attraction of candidates, screening applications, interviewing, assessments, background checking, and selection.
+                Key steps in the selection process include:
+                <ul>
+                    <li><strong>Sourcing and Attraction:</strong> Identifying potential candidates through job postings, recruitment agencies, or employee referrals.</li>
+                    <li><strong>Screening Applications:</strong> Reviewing resumes and cover letters to shortlist candidates.</li>
+                    <li><strong>Interviews:</strong> Conducting various types of interviews (phone, video, panel) to assess candidate suitability.</li>
+                    <li><strong>Assessments:</strong> Using tests and exercises to evaluate skills and competencies.</li>
+                    <li><strong>Background Checking:</strong> Verifying references and past employment details.</li>
+                    <li><strong>Selection:</strong> Choosing the candidate who best fits the role.</li>
+                </ul>
             </p>
             <p>
-                Explain 2-3 essential parts of the system comprehensively with real examples. For instance, describe conducting interviews, the different types of interviews (phone, video, panel), the composition of questions, competency-oriented questions, and the core skills that will be assessed.
+                Provide detailed examples of 2-3 crucial parts of this process. For example, explain how structured interviews can be designed to include competency-based questions that assess skills relevant to the job.
             </p>
             <p>
-                Analyze types of selection tools like aptitude and personality tests during selection procedures and their role in forecasting candidates’ job performance. Conduct 2-3 assessments to test the effectiveness of these tools.
+                Discuss the role of selection tools such as aptitude and personality tests. Analyze their effectiveness in predicting job performance and ensuring the best candidate is chosen.
             </p>
             <p>
-                Summarize by explaining how a thorough and rigorous selection process results in higher caliber hires, job satisfaction, and retention.
+                Conclude by emphasizing that a well-defined selection process leads to higher-quality hires, increased job satisfaction, and improved employee retention.
             </p>
 
-            <h4>2. What are the statutory and non-statutory benefits for employees in a company or organization you are familiar with? (500 words)</h4>
+            <h4>2. What Are the Statutory and Non-Statutory Benefits for Employees in a Company? (500 words)</h4>
             <p>
-                Include statutory benefits and non-statutory effects. Statutory benefits are defined by laws and must be provided by companies, while non-statutory benefits are offered voluntarily and are not mandated by law.
+                Employee benefits can be categorized into statutory (legally required) and non-statutory (optional) benefits. Statutory benefits are mandated by law, whereas non-statutory benefits are offered at the employer's discretion to enhance employee satisfaction and retention.
             </p>
             <p>
-                Specify 5-7 essential statutory benefits and succinctly explain each one. Examples include ESI (Employee State Insurance), PF (Provident Fund), gratuity, maternity leave, minimum wages, and workplace safety, citing the governing laws.
+                <strong>Statutory Benefits:</strong> These typically include:
+                <ul>
+                    <li>Employee State Insurance (ESI)</li>
+                    <li>Provident Fund (PF)</li>
+                    <li>Gratuity</li>
+                    <li>Maternity Leave</li>
+                    <li>Minimum Wages</li>
+                    <li>Workplace Safety</li>
+                </ul>
+                Provide a brief explanation of each benefit and cite the relevant laws governing them.
             </p>
             <p>
-                Describe non-statutory benefits provided by an example company, such as medical insurance, health care programs, leave policies, pension schemes, and recreational activities.
+                <strong>Non-Statutory Benefits:</strong> Examples include:
+                <ul>
+                    <li>Health Insurance Plans</li>
+                    <li>Retirement/Pension Plans</li>
+                    <li>Flexible Working Hours</li>
+                    <li>Paid Time Off (PTO) and Vacation Policies</li>
+                    <li>Wellness Programs and Recreational Activities</li>
+                </ul>
+                Describe how these benefits, such as private health insurance, are structured, including coverage levels and specific advantages they offer employees.
             </p>
             <p>
-                Explain the private health insurance and wellness advantages your company offers, including levels of coverage, plan details, and benefits to employees.
-            </p>
-            <p>
-                Highlight the role benefits play in making workers happy, retaining them, attracting new employees, and bridging the gap between work and private life.
-            </p>
-            <p>
-                Summarize by stating that both statutory and non-statutory benefits serve to safeguard and support employees.
+                Conclude by discussing the importance of both types of benefits in enhancing employee satisfaction, loyalty, and work-life balance. Highlight how these benefits can make a company more attractive to potential employees and help retain current staff.
             </p>
         </div>
     </div>
 </div>
+
+<div class="accordion" id="mastersFaqAccordion">
+    <!-- FAQ Entry 1 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                What academic writing services do you offer for Master's students?
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                At [Top Essay Tutors], we offer custom writing services for Master’s students, including thesis writing, dissertation assistance, research papers, and more. Visit our [services page] for a detailed list.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 2 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How can I place an order for my thesis or dissertation?
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                To place an order, visit our [order page] and fill out the form with your project details. You'll receive a personalized quote and we’ll match you with a skilled writer.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 3 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Are there any examples of your work available?
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, you can view [sample papers] on our website to understand the quality and style of our writing.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 4 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                What is your process for handling complex research topics?
+            </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Our writers are experts in various fields and are equipped to handle complex research topics. For more information on our approach, visit our [services page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 5 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                How do I know my thesis will meet academic standards?
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We adhere to strict academic standards and guidelines. Our thorough writing and editing processes ensure that your thesis meets all academic requirements. Learn more on our [services page].
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional FAQ Entries go here... -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Can I get help with specific parts of my dissertation?
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, we can assist with specific parts of your dissertation, including literature reviews, methodology, and data analysis. For targeted assistance, visit our [FAQs page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 7 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                What if I need revisions after receiving my order?
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We offer revisions to ensure your work meets your expectations. If you need changes, please contact us through our [contact page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 8 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Do you offer any discounts for new clients?
+            </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, new clients can benefit from special discounts. Check our [order page] for current promotions and offers.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 9 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                How do I communicate with my writer during the project?
+            </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                You can communicate with your writer through our secure messaging system, accessible from our [order page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 10 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                What qualifications do your writers have?
+            </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Our writers hold advanced degrees and have extensive experience in academic writing. For more details, visit our [about page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 11 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEleven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                How can I ensure confidentiality for my academic work?
+            </button>
+        </h2>
+        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We prioritize confidentiality and follow strict privacy protocols to protect your information. Learn more about our privacy practices on our [services page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 12 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwelve">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                What is the typical turnaround time for a thesis or dissertation?
+            </button>
+        </h2>
+        <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Turnaround times vary depending on the complexity and length of your project. For specific deadlines, please consult our [order page].
+            </div>
+        </div>
+    </div>
+        <!-- FAQ Entry 13 -->
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThirteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                Can you help with formatting and citation styles?
+            </button>
+        </h2>
+        <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, we handle formatting and citation according to the required academic style. For more details, visit our [services page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 14 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFourteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                Do you offer any additional resources for Master’s students?
+            </button>
+        </h2>
+        <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, our [blog] provides tips and resources on various aspects of academic writing and research.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 15 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFifteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                How do I track the progress of my order?
+            </button>
+        </h2>
+        <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                You can track your order through our secure platform on the [order page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 16 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSixteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                What if I need help with editing my own work?
+            </button>
+        </h2>
+        <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We offer editing and proofreading services to help refine your existing work. For more information, visit our [services page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 17 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeventeen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                Can I choose a specific writer for my project?
+            </button>
+        </h2>
+        <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, you can request a specific writer based on their expertise. For more details, visit our [order page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 18 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEighteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                What should I include when placing an order?
+            </button>
+        </h2>
+        <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Include detailed information about your project, such as the topic, requirements, and deadlines. For a complete guide, visit our [order page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 19 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNineteen">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+                How do you ensure the originality of the work?
+            </button>
+        </h2>
+        <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We use plagiarism detection tools and ensure all work is original. Learn more about our quality assurance on our [services page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 20 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwenty">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                Can you help with research proposals?
+            </button>
+        </h2>
+        <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, we assist with writing and editing research proposals. For more information, visit our [services page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 21 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentyOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
+                What happens if I’m not satisfied with the final work?
+            </button>
+        </h2>
+        <div id="collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="headingTwentyOne" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We offer revisions and a satisfaction guarantee. Contact us through our [contact page] if you have any concerns.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 22 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentyTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+                How do I provide feedback on the work?
+            </button>
+        </h2>
+        <div id="collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="headingTwentyTwo" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Feedback can be provided through our secure messaging system or directly on the [order page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 23 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentyThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyThree" aria-expanded="false" aria-controls="collapseTwentyThree">
+                What makes your service different from others?
+            </button>
+        </h2>
+        <div id="collapseTwentyThree" class="accordion-collapse collapse" aria-labelledby="headingTwentyThree" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Our personalized approach and focus on Master's level academic writing set us apart. Discover more about our unique services on our [main website].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 24 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentyFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyFour" aria-expanded="false" aria-controls="collapseTwentyFour">
+                Can you handle urgent orders?
+            </button>
+        </h2>
+        <div id="collapseTwentyFour" class="accordion-collapse collapse" aria-labelledby="headingTwentyFour" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, we can handle urgent orders. Please specify your deadline when placing the order, and we will do our best to meet it.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 25 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentyFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyFive" aria-expanded="false" aria-controls="collapseTwentyFive">
+                How do I contact customer support?
+            </button>
+        </h2>
+        <div id="collapseTwentyFive" class="accordion-collapse collapse" aria-labelledby="headingTwentyFive" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                You can contact our customer support team through the [contact page] or via email at support@example.com.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 26 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentySix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentySix" aria-expanded="false" aria-controls="collapseTwentySix">
+                Are there any discounts available for bulk orders?
+            </button>
+        </h2>
+        <div id="collapseTwentySix" class="accordion-collapse collapse" aria-labelledby="headingTwentySix" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                Yes, we offer discounts for bulk orders. Please contact us for more information on our bulk pricing options.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 27 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentySeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentySeven" aria-expanded="false" aria-controls="collapseTwentySeven">
+                What payment methods do you accept?
+            </button>
+        </h2>
+        <div id="collapseTwentySeven" class="accordion-collapse collapse" aria-labelledby="headingTwentySeven" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We accept various payment methods, including credit/debit cards, PayPal, and bank transfers. For more details, visit our [payment page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 28 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentyEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyEight" aria-expanded="false" aria-controls="collapseTwentyEight">
+                How do you handle data privacy and security?
+            </button>
+        </h2>
+        <div id="collapseTwentyEight" class="accordion-collapse collapse" aria-labelledby="headingTwentyEight" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We prioritize data privacy and security, using encryption and secure servers to protect your information. Learn more about our policies on our [privacy page].
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 29 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwentyNine">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwentyNine" aria-expanded="false" aria-controls="collapseTwentyNine">
+                Can I request a sample before placing an order?
+            </button>
+        </h2>
+        <div id="collapseTwentyNine" class="accordion-collapse collapse" aria-labelledby="headingTwentyNine" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We offer sample work on request. Please contact us to discuss your needs and receive a sample related to your project.
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Entry 30 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThirty">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty">
+                What if I need revisions after the final work is delivered?
+            </button>
+        </h2>
+        <div id="collapseThirty" class="accordion-collapse collapse" aria-labelledby="headingThirty" data-bs-parent="#mastersFaqAccordion">
+            <div class="accordion-body">
+                We offer revision services according to our revision policy. Please refer to our [revision policy page] for more details.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
 @include('includes.footer')
 
 
