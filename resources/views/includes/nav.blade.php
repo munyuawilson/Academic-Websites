@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse justify-content-end "   id="navbarSupportedContent">
               <ul class="navbar-nav ">
                 <li class="nav-item link">
-                  <a class="nav-link  text-black" href="mailto:topessaytutors@gmail.com">Contact</a>
+                  <a class="nav-link  text-black" href="#footer">Contact</a>
                 </li>
                 <li class="nav-item link">
                   <a class="nav-link text-black" href="/blog">Blog</a>

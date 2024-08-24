@@ -1,7 +1,13 @@
 <div class="container-fluid mt-5 border-top justify-content-center text-danger" id="contact">
   <div class="row mt-3 text-black">
 
-<div class="col-xl-3 col-lg-3 col-md-3 text-center"><img src="{{ asset('/images\logo.png') }}" height="70px"  alt="logo"></div>
+<div class="col-xl-3 col-lg-3 col-md-3 text-center"><img src="{{ asset('/images\logo.png') }}" height="70px"  alt="logo">
+
+
+</div>
+
+
+
 <div class="col-xl-3 col-lg-3 col-md-3 text-center">
   <h3 class="default-color pt-2 text-center">About Us</h3>
 
@@ -16,6 +22,8 @@
  
 
 </ul>
+
+
 </div>
 <div class="col-xl-3 col-lg-3 col-md-3 text-center">
   <h3 class="default-color pt-2 text-center">Our Services</h3>
@@ -47,7 +55,26 @@
 </div>
 </div>
 </div>
+<p style="font-size: 14px;" class="text-center pt-4" id="footer">
+    <a href="https://m.facebook.com/pages/category/Education/106700887813105/?locale=ms_MY" aria-label="Facebook" target="_blank" style="margin-right: 50px;">
+        <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://twitter.com/TopEssayTutors1/status/1356050389561454592" aria-label="Twitter" target="_blank" style="margin-right: 50px;">
+        <i class="fab fa-x text-black"></i>
+    </a>
+    <a href="https://www.instagram.com/top_essay_tutors/?hl=en" aria-label="Instagram" target="_blank" style="margin-right: 50px;">
+        <i class="fab fa-instagram " style="color:rgb(198, 8, 132);"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/top-essay-tutors-139a48190" aria-label="LinkedIn" target="_blank" style="margin-right: 50px;">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.pinterest.com/benjamingathuku/" aria-label="Pinterest" target="_blank">
+        <i class="fab fa-pinterest text-danger"></i>
+    </a>
+    </a>
+</p>
 </div>
 <div class="container mt-5">
-  <p class="text-center mt-5">2011-2024 © topessaytutors.com All rights reserved. Developed by: Turbo Knights Systems</p>
+
+  <p class="text-center mt-5 pt-2">2011-2024 © topessaytutors.com All rights reserved. Developed by: Turbo Knights Systems</p>
 </div>

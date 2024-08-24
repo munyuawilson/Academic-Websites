@@ -28,7 +28,7 @@ function writeblog(Request $request){
 } 
 function writeSamples(Request $request){
 
-    $Content=$request->get('blog');
+    $Content=$request->input('blog');
 
     $title=$request->get('title');
 

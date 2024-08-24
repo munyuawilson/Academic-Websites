@@ -216,6 +216,7 @@ a.article:hover {
 <!-- Place the first <script> tag in your HTML's <head> -->
 <script src="https://cdn.tiny.cloud/1/1r192lzqx77235x2nhy9ytr0jobzxi1frl633adoz8k3agra/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
 
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
 
 
 </head>
@@ -234,31 +235,20 @@ a.article:hover {
     </div>
     <!-- Place the first <script> tag in your HTML's <head> -->
 
-<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
-<script>
-  tinymce.init({
-    selector: 'textarea',
-    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
-    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-    tinycomments_mode: 'embedded',
-    tinycomments_author: 'Author name',
-    mergetags_list: [
-      { value: 'First.Name', title: 'First Name' },
-      { value: 'Email', title: 'Email' },
-    ],
-    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-  });
-</script>
-<form action="/admin/addblog" method="post">
+<form action="/admin/addblog" method="post" onsubmit="submitForm()">
     @csrf
     <div class="form-group mb-4">
     <label for="title" class="fw-bold">Title:</label>
     <input type="text" id="title" name="title" class="form-control" placeholder="Enter title here" required>
     <!-- Add a placeholder for better user guidance -->
 </div>
-<textarea name="blog">
-  Welcome to Blog!
-</textarea>
+<div id="editor">
+  <p>  Welcome to Blogs
+  </p>
+  
+</div>
+<!-- Hidden textarea to hold the Quill editor content -->
+<textarea name="blog" id="content" style="display:none;"></textarea>
 <div class="form-group text-center mt-5">
 <input type="submit" value="submit" class="btn btn-primary">
 </div>
@@ -287,7 +277,22 @@ a.article:hover {
     </div>
 
    
+<!-- Include the Quill library -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
+<!-- Initialize Quill editor -->
+<script>
+  const quill = new Quill('#editor', {
+    theme: 'snow'
+  });
+  
+
+ function submitForm() {
+        // Populate the hidden textarea with the Quill editor content
+        document.querySelector('textarea[name=blog]').value = quill.root.innerHTML;
+    
+    }
+</script>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
