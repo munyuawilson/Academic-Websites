@@ -39,6 +39,14 @@
                     </i> Samples</a>
                 </li>
                 <li>
+                <a href="/admin/deleteblog"><i class="fas fa-blog"></i>
+                    </i> Delete Blog</a>
+                </li>
+                <li>
+                <a href="/admin/deletesamples"><i class="fas fa-blog"></i>
+                    </i> Delete Samples</a>
+                </li>
+                <li>
                     <a href="/"><i class="fas fa-address-book"></i> Contact</a>
                 </li>
 

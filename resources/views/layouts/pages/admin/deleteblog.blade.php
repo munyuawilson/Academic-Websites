@@ -13,7 +13,6 @@
   rel="stylesheet"
 />
 <style>
-    
     /*
     DEMO STYLE
 */
@@ -118,7 +117,7 @@ a:focus {
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #fff;
+    color: black;
     background: #6d7fcc;
 }
 
@@ -213,15 +212,12 @@ a.article:hover {
         
 
 </style>
-<!-- Place the first <script> tag in your HTML's <head> -->
-<link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
-
-
 
 </head>
 <body>
     
 @include('layouts.includes.sidebaradmin')
+
 
         <!-- Page Content  -->
         <div id="content">
@@ -229,28 +225,47 @@ a.article:hover {
         @include('layouts.includes.topadminnav')   
 
         <div class="container mt-5">
-        <h2 class="text-center pb-5">Blog</h2>
+        <h2 class="text-center pb-5">Delete Blogs</h2>
         
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    
+                    <th scope="col">Category</th>
+                    <th scope="col">Date Published</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($blogs as $blog)
+                <tr>
+                    <td>{{ $blog->id }}</td>
+                    <td>{{ $blog->title }}</td>
+                    <td>{{ $blog->author }}</td>
+                    <td>{{ $blog->category }}</td>
+                    <td>{{ $blog->published_date }}</td>
+                    <td>
+                        <a href="/blogs/{{ $blog->id }}/edit" class="btn btn-warning btn-sm">Edit</a>
+                        <form action="/blogs/{{ $blog->id }}" method="POST" style="display:inline;">
+                            @csrf
+                            
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
-   
-<form action="/admin/addblog" method="post" onsubmit="submitForm()">
-    @csrf
-    <div class="form-group mb-4">
-    <label for="title" class="fw-bold">Title:</label>
-    <input type="text" id="title" name="title" class="form-control" placeholder="Enter title here" required>
-    <!-- Add a placeholder for better user guidance -->
 </div>
-<div id="editor">
-  <p>  Welcome to Blogs
-  </p>
-  
-</div>
-<textarea name="blog" id="content" style="display:none;"></textarea>
 
-<div class="form-group text-center mt-5">
-<input type="submit" value="submit" class="btn btn-primary">
-</div>
-</form>
+    </div>
+    </div>
+    </body>
+    </html>
 
 
 
@@ -276,23 +291,7 @@ a.article:hover {
 
    
 
-   
-<!-- Include the Quill library -->
-<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
-<!-- Initialize Quill editor -->
-<script>
-  const quill = new Quill('#editor', {
-    theme: 'snow'
-  });
-  
-
- function submitForm() {
-        // Populate the hidden textarea with the Quill editor content
-        document.querySelector('textarea[name=blog]').value = quill.root.innerHTML;
-    
-    }
-</script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Popper.JS -->

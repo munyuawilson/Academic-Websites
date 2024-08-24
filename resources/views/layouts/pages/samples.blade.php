@@ -13,8 +13,7 @@
                 @foreach ($samples as $sample)
                     <div class="blog-post mb-4">
                         <h2 class="blog-post-title">{{ $sample->title }}</h2>
-                        <p class="blog-post-meta">{{ $sample->created_at->format('F j, Y') }} by <a href="#">Author</a></p>
-                        <p>{{ $sample->content }}</p>
+                        <p>{!! $sample->content !!}</p>
                        
                     </div>
                 @endforeach
@@ -30,9 +29,10 @@
                     <h4>Recent Posts</h4>
                     <ul class="list-unstyled">
                         @foreach ($samples as $sample)
-                            <li><a href="#">{{ $sample->title }}</a></li>
+                            <li><a href="#" class="text-decoration-underline text-primary">{{ $sample->title }}</a></li>
                         @endforeach
                     </ul>
+                    
                 </div>
             </aside>
         </div>

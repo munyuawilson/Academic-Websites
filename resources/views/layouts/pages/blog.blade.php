@@ -22,7 +22,6 @@
                 @foreach ($blogPosts as $post)
                 <div class="blog-post">
                     <h3>{{ $post->title }}</h3>
-                    <p class="text-muted">{{ $post->created_at->format('M d, Y') }}</p>
                     <p>{!! $post->content !!}</p>
                 </div>
                 @endforeach

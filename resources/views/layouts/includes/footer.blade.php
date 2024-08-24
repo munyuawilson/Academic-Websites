@@ -3,12 +3,11 @@
     <div class="row mt-3 ">
         <div class="col px-4 ">
             <h4>Contact Us</h4>
-            <ul class="links">
-            <li>perfectpapers54@gmail.com
+            <ul class="links ">
+            <li class="text-white">undergraduateshighschoolassign@gmail.com
 
 </li>
-            <li>+1 (914) 317-4571</li>
-            <li>+1 (365) 657-5404</li>
+            <li class="text-white">+1 (914) 317-4571</li>
         </ul>
     </div>
         <div class="col px-4 mx-3">
@@ -29,7 +28,13 @@
     </div>
   
 </div>
-
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="closePopup" class="close">&times;</span>
+        <h2>Exclusive offers on full courses this semester! Contact us now!</h2>
+        <a href="/faqs" class="btn">Explore Our Services</a>
+        <a href="mailto:undergraduateshighschoolassign@gmail.com" class="btn">Contact Us</a>
+    </div>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -79,5 +84,29 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+</script>
+<script>
+  // Get the popup
+var popup = document.getElementById("popup");
+
+// Get the <span> element that closes the popup
+var span = document.getElementById("closePopup");
+
+// Show the popup when the page loads
+window.onload = function() {
+    popup.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the popup
+span.onclick = function() {
+    popup.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the popup, close it
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
 </script>
 </html>

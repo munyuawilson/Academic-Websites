@@ -77,3 +77,9 @@ Route::get('/confirm',function(){
     return view('layouts.pages.confirm');
 })->name('confirm');
 Route::post('/confirm',"App\Http\Controllers\logincontroller@confirmCode");
+
+
+Route::get('/admin/deleteblog','App\Http\Controllers\blogcontroller@returnblogs');
+Route::post('/blogs/{id}','App\Http\Controllers\blogcontroller@destroy');
+Route::get('/admin/deletesamples','App\Http\Controllers\blogcontroller@returnsamples');
+Route::post('/samples/{id}','App\Http\Controllers\blogcontroller@destroysamples');
