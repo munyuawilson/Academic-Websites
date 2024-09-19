@@ -1,0 +1,46 @@
+.img-bg{
+
+
+background-image: url(../images/bg.jpeg);
+background-size: cover;
+background-repeat: no-repeat;
+
+background-position: center;
+padding-top: 250px;
+padding-bottom: 70px;
+}
+
+
+.div1-styling{
+
+    margin-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+        .typing-animation {
+            display: inline-block;
+            border-right: 2px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end), blink .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 50%; }
+        }
+
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+        .card-title { font-size: 1.25rem; }
+        .card-subtitle { font-size: 0.875rem; }
+        .overview-card { background-color: #f8f9fa; }
+        .metric-card { background-color: #ffffff; }
+        .notification-card { background-color: #f8f9fa; }
+        .dashboard-header { margin-bottom: 20px; }
